@@ -20,3 +20,6 @@ Completer some source code in order to print 3 times a string stored in the vari
 
 **Task 6: Play with strings.**
 Complete some source code to print `Welcome to Holberton School!`. You are not allowed to use any loops or conditional statements. You have to use the variables `str1` and `str2` in your new line of code. Your program should be exactly 5 lines long.
+
+**Task 7: Copy - Cut - Paste.**
+Complete the given source code that prints the first 3 letters, the last 2 letters and the string without the first and last letters of the variable `word`. Your program should be exactly 8 lines long. You are not allowed to use any loops or conditional statements.

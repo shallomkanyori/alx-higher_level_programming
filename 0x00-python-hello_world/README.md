@@ -47,3 +47,6 @@ Write a Python script that prints exactly `and that piece of art is useful - Dor
 
 **Task 12: Compile.**
 Write a script that compiles a Python script file. The Python file name will be stored in the environment variable `$PYFILE`. The output filename has to be `$PYFILEc`.
+
+**Task 13: ByteCode->Python#1.**
+Write the Python function `def magic_calculation(a, b):` that does exactly the same as the following Python bytecode:

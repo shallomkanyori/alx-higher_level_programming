@@ -36,3 +36,11 @@ Write a Python script that prints "The Zen of Python", by Tim Peters, followed b
 - Whiteboard first
 - This task will include checks for the efficiency of your solution.
 Write a funciton in C that checks if a singly linked list has a cycle in it and returns `0` if there is no cycle or `1` if there is a cycle. Only these functions are allowed: `write`, `printf`, `putchar`, `puts`, `malloc`, `free`.
+
+
+**Task 11: Hello, write.**
+Write a Python script that prints exactly `and that piece of art is useful - Dora Korpar, 2015-10-19` followed by a new line.
+- Use the function `write` from the `sys` module
+- You are not allowed to use `print`
+- Your script should print to `stderr`
+- Your script should exit with the status code `1`

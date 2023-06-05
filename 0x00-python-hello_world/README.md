@@ -17,3 +17,6 @@ Complete some source code in order to print the float stored in the variable `nu
 
 **Task 5: Print string.**
 Completer some source code in order to print 3 times a string stored in the variable `str`, followed by a new line, followed by its first 9 characters, followed by a new line. You are not allowed to use any loops or conditional statement. Your program should be maximum 5 lines long.
+
+**Task 6: Play with strings.**
+Complete some source code to print `Welcome to Holberton School!`. You are not allowed to use any loops or conditional statements. You have to use the variables `str1` and `str2` in your new line of code. Your program should be exactly 5 lines long.

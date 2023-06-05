@@ -28,4 +28,11 @@ Complete the given source code that prints the first 3 letters, the last 2 lette
 Complete the given source code to print `object-oriented programming with Python`, followed by a new line. You are not allowed to use any loops or conditional statements. Your program should be exactly 5 lines long. You are not allowed to create new variables. You are not allowed to use string literals.
 
 **Task 9: Easter egg.**
-Write a Python script that prints the "The Zen of Python", by Tim Peters, followed by a new line. Your script should be a maximum 98 characters long.
+Write a Python script that prints "The Zen of Python", by Tim Peters, followed by a new line. Your script should be a maximum 98 characters long.
+
+**Task 10: Linked list cycle.**
+**Technical interview preparation.**
+- You are not allowed to google anything
+- Whiteboard first
+- This task will include checks for the efficiency of your solution.
+Write a funciton in C that checks if a singly linked list has a cycle in it and returns `0` if there is no cycle or `1` if there is a cycle. Only these functions are allowed: `write`, `printf`, `putchar`, `puts`, `malloc`, `free`.

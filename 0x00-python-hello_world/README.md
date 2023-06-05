@@ -23,3 +23,6 @@ Complete some source code to print `Welcome to Holberton School!`. You are not a
 
 **Task 7: Copy - Cut - Paste.**
 Complete the given source code that prints the first 3 letters, the last 2 letters and the string without the first and last letters of the variable `word`. Your program should be exactly 8 lines long. You are not allowed to use any loops or conditional statements.
+
+**Task 8: Create a new sentence.**
+Complete the given source code to print `object-oriented programming with Python`, followed by a new line. You are not allowed to use any loops or conditional statements. Your program should be exactly 5 lines long. You are not allowed to create new variables. You are not allowed to use string literals.

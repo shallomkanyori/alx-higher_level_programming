@@ -98,3 +98,11 @@ Write a function that prints the numbers from 1 to 100 separated by a space.
 Write a function in C that inserts a number into a sorted singly linked list.
 - Prototype: `listint_t *insert_node(listint_t **head, int number);`
 - Return: the address of the new node, or `NULL` if it failed
+
+
+**Task 14: Smile in the mirror.**
+Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase, not followed by a new line.
+- You can only use one `print` function with string format
+- You can only use one loop in your code
+- You are not allowed to store characters in a variable
+- You are not allowed to import any module

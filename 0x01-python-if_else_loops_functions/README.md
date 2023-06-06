@@ -76,3 +76,9 @@ Write a function that adds two integers and returns the result
 - Prototype: `def add(a, b):`
 - Returns the value of `a + b`
 - You are not allowed to import any module
+
+**Task 11: a ^ b.**
+Write a function that computes `a` to the power of `b` and returns the value.
+- Prototype: `def pow(a, b):`
+- Returns the value of `a ^ b`
+- You are not allowed to import any module

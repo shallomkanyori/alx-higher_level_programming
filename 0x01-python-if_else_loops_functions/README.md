@@ -106,3 +106,8 @@ Write a program that prints the ASCII alphabet, in reverse order, alternating lo
 - You can only use one loop in your code
 - You are not allowed to store characters in a variable
 - You are not allowed to import any module
+
+**Task 15: Remove at position.**
+Write a function that creates a copy of the string, removing the character at the position `n`(not the Python way, "C array index").
+- Prototype: `def remove_char_at(str, n):`
+- You are not allowed to import any module

@@ -25,3 +25,9 @@ Write a program that prints the number of and the list of its arguments.
 	- followed by `:` (or `.` if no arguments were passed) followed by a new line
 	- followed by (if at least one argument), one line per argument: the position of the argument (starting at `1`) followed by `:`, followed by the argument value and a new line.
 - Your code should not be executed when imported.
+
+**Task 3: Infinite addition.**
+Write a program that prints the result of the addition of all its arguments followed by a new line.
+- You can cast arguments into integers by using `int()` (you can assume that all arguments can be casted into integers).
+- Your code should not be executed when imported.
+- Your program should also handle big numbers.

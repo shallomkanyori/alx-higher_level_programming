@@ -61,6 +61,9 @@ Write a program that prints `#pythoniscool`, followed by a new line, in the stan
 - Your program should be maximum 2 lines long.
 - You are not allowed to use `print` or `eval` or `open` or `import sys` in your file.
 
+**Task 8: ByteCode->Python#3.**
+Write the Python function `def magic_calculation(a, b):` that does exactly the same as the following Python bytecode:
+
 **Task 9: Fast alphabet.**
 Write a program that prints the alphabet in uppercase, followed by a new line.
 - Your program should be maximum 3 lines long

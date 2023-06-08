@@ -58,5 +58,10 @@ write a program that imports all functions from the file `calculator_1.py` and h
 
 **Task 7: Easy print.**
 Write a program that prints `#pythoniscool`, followed by a new line, in the standard output.
-- Your program should be maximum 2 lines long
-- You are not allowed to use `print` or `eval` or `open` or `import sys` in your file
+- Your program should be maximum 2 lines long.
+- You are not allowed to use `print` or `eval` or `open` or `import sys` in your file.
+
+**Task 9: Fast alphabet.**
+Write a program that prints the alphabet in uppercase, followed by a new line.
+- Your program should be maximum 3 lines long
+- You are not allowed to use any loops, any conditional statements, `str.join()`, any string literal, or any system calls

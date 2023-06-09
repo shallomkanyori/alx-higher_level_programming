@@ -96,3 +96,10 @@ Complete the given source code in order to switch the value of `a` and `b`.
 - You can find the source code [here](https://github.com/alx-tools/0x03.py/blob/master/12-switch_py)
 - Your code should be inserted where the comment is (line 4)
 - Your program should be exactly 5 lines long
+
+**Task 13: Linked list palindrome.**
+**Technical interview preparation**
+Write a function in C that checks if a singly linked list is a palindrome.
+- Prototype: `int is_palindrome(listint_t **head);`
+- Return: `0` if it is not a palindrome, `1` if it is a palindrome
+- An empty list is considered a palindrome

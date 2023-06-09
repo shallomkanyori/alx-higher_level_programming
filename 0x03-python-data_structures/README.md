@@ -15,3 +15,10 @@ Write a function that retrieves an element from a list like in C.
 - If `idx` is negative or if `idx` is out of range, the function should return None
 - You are not allowed to import any module
 - You are not allowed to use `try/except`
+
+**Task 2: Replace element.**
+Write a function that replaces an elment of a list at a specific position (like in C).
+- Prototype: `def replace_in_list(my_list, idx, element):`
+- If `idx` is negative of if `idx` is out of range, the function should not modify anything, and return the original list
+- You are not allowed to import any module
+- You are not allowed to use `try/except`

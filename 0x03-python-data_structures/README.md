@@ -38,3 +38,10 @@ Write a function that replaces an element in a list at a specific position witho
 - If `idx` is negative or out of range, the function should return a copy of the original list
 - You are not allowed to import any module
 - You are not allowed to use `try/except`
+
+**Task 5: Can you C me now?**
+Write a function that removes all characters `c` and `C` from a string.
+- Prototype: `def no_c(my_string):`
+- The function should return the new string
+- You are not allowed to import any module
+- You are not allowed to use `str.replace()`

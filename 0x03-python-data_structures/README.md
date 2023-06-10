@@ -103,3 +103,11 @@ Write a function in C that checks if a singly linked list is a palindrome.
 - Prototype: `int is_palindrome(listint_t **head);`
 - Return: `0` if it is not a palindrome, `1` if it is a palindrome
 - An empty list is considered a palindrome
+
+
+**Task 14: CPython #0: Python lists.**
+Create a C function that prints some basic info about Python lists.
+- Prototype: `void print_python_list_info(PyObject *p);`
+- Python version: 3.4
+- Your shared library will be compiled with this command line: `gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c`
+- OS: `Ubuntu 14.04 LTS`

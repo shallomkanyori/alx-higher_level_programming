@@ -28,3 +28,8 @@ Write a function that adds all unique integers in a list (only once for each int
 Write a function that returns a set of common element in two sets.
 - Prototype: `def common_elements(set_1, set_2):`
 - You are not allowed to import any module
+
+**Task 4: Only differents.**
+Write a function that returns a set of all elements present in only one set.
+- Prototype: `def only_diff_elements(set_1, set_2):`
+- You are not allowed to import any module

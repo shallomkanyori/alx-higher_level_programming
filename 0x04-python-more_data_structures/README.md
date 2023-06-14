@@ -94,3 +94,10 @@ Create a function `def roman_to_int(roman_string):` that converts a Roman numera
 - You can assume the number will be between 1 to 3999.
 - `def roman_to_int(roman_string)` must return an integer
 - If the `roman_string` is not a string or `None`, return 0
+
+
+**Task 13: Weighted average.**
+Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`.
+- Prototype: `def weight_average(my_list=[]):`
+- Returns `0` if the list is empty
+- You are not allowed to import any module

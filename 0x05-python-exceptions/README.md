@@ -80,3 +80,10 @@ Write a function that prints an integer.
 - You have to use `try: / except:`
 - You have to use `"{:d}".format()` to print as integer
 - You are not allowed to use `type()`
+
+**Task 8: Safe function.**
+Write a function that executes a function safely.
+- Prototype: `def safe_function(fct, *args):`
+- You can assume `fct` will be always a pointer to a function
+- Returns the result of the function. Otherwise, returns `None` if something happens during the function and prints in `stderr` the error preceded by `Exception:`
+- You have to use `try: / except:`

@@ -87,3 +87,6 @@ Write a function that executes a function safely.
 - You can assume `fct` will be always a pointer to a function
 - Returns the result of the function. Otherwise, returns `None` if something happens during the function and prints in `stderr` the error preceded by `Exception:`
 - You have to use `try: / except:`
+
+**Task ByteCode -> Python #4.**
+Write the Python function `def magic_calculation(a, b):` that does exactly the same as the given Python bytecode.

@@ -34,13 +34,13 @@ class Node():
         """Node: the next node.
 
         Raises:
-            TypeError: if value is not a None or a Node."""
+            TypeError: if value is not None or a Node."""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
         if not isinstance(value, Node) and value is not None:
-            raise TypeError("next node must be a Node object")
+            raise TypeError("next_node must be a Node object")
 
         self.__next_node = value
 

@@ -34,10 +34,11 @@ class Square():
 
     def my_print(self):
         """Prints the square with the character #"""
+
         if self.size == 0:
             print("")
         else:
-            print(("#" * self.size + "\n") * self.size)
+            print(("#" * self.size + "\n") * self.size, end="")
 
     def area(self):
         """Returns the area of the square"""

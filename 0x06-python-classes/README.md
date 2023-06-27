@@ -121,3 +121,6 @@ Write a class `Square` that defines a square by: (based on `4-sqaure.py`)
 - Public instance method: `def area(self):` that returns the current square area
 - `Square` instances can answer to comparators `==`, `!=`, `>`, `>=`, `<` and `<=` based on the square area
 - You are not allowed to import any module
+
+**Task 10: ByteCode -> Python #5.**
+Write the Python class `MagicClass` that does exactly the same as the given Python bytecode.

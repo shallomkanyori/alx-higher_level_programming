@@ -53,7 +53,7 @@ void print_python_bytes(PyObject *p)
 	}
 
 	size = PyBytes_Size(p);
-	peek_size = size > 10 ? 10 : (size + 1);
+	peek_size = size >= 10 ? 10 : (size + 1);
 	byte_str = ((PyBytesObject *)p)->ob_sval;
 
 	printf("  size: %ld\n", size);

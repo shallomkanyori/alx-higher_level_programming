@@ -1,0 +1,51 @@
+==========================
+Tests for 0-add_integer.py
+==========================
+
+This module has one function, ``add_integer() that simply adds two integers.
+
+Numbers
+=======
+
+``add_integer`` returns the sum of its arguments after converting any float
+argument to an integer
+
+::
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(5, -3)
+	2
+
+Floating-point values are converted to integers.
+::
+	>>> add_integer(2.9, 3.1)
+	5
+
+Non-Numbers
+===========
+
+If any argument is not a number, ``add_integer()`` raises a TypeError.
+
+::
+	>>> add_integer("2", 3)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(2, [3, 4, 5])
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(3, {"one", "two", "three"})
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer((1, 2), 5)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(-12.9, {"one": 1, "two": 2, "three": 3})
+	Traceback (most recent call last):
+	TypeError: b must be an integer

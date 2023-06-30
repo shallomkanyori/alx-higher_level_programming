@@ -33,3 +33,10 @@ Write a function that prints a square with the character `#`.
 - if `size` is less than `0`, raise a `ValueError` exception with the message `size must be >= 0`
 - if `size` is a float and is less than 0, raise a `TypeError` exception with the message `size must be an integer`
 - You are not allowed to import any module
+
+**Task 4: Text indentation.**
+Write a function that prints a text with 2 new lines after each of these characters: `.`, `?` and `:`
+- Prototype: `def text_indentation(text):`
+- `text` must be a string, otherwise raise a `TypeError` exception with the message `text` must be a string
+- There should be no space at the beginning or at the end of each printed line
+- You are not allowed to import any module

@@ -29,7 +29,7 @@ Write a function that prints `My name is <first name> <last name>`
 Write a function that prints a square with the character `#`.
 - Prototype: `def print_square(size):`
 - `size` is the size length of the square
-- `size` must be an integer, otherwise raise a `TypeError` exception with the message size must be an integer`
+- `size` must be an integer, otherwise raise a `TypeError` exception with the message `size must be an integer`
 - if `size` is less than `0`, raise a `ValueError` exception with the message `size must be >= 0`
 - if `size` is a float and is less than 0, raise a `TypeError` exception with the message `size must be an integer`
 - You are not allowed to import any module
@@ -40,3 +40,11 @@ Write a function that prints a text with 2 new lines after each of these charact
 - `text` must be a string, otherwise raise a `TypeError` exception with the message `text` must be a string
 - There should be no space at the beginning or at the end of each printed line
 - You are not allowed to import any module
+
+**Task 5: Max integer - Unittest.**
+write unittests for the function `def max_integer(list=[]):`.
+- Your test file should be inside a folder `tests`
+- You have to use the unittest module
+- Your test file should be a python file (extension: `.py`)
+- Your test file should be executed by using this command: `python3 -m unittest tests.6-max_integer_test`
+- All tests you make must be passable by the `max_integer()` function

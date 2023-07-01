@@ -48,3 +48,16 @@ write unittests for the function `def max_integer(list=[]):`.
 - Your test file should be a python file (extension: `.py`)
 - Your test file should be executed by using this command: `python3 -m unittest tests.6-max_integer_test`
 - All tests you make must be passable by the `max_integer()` function
+
+**Task 6. Matrix multiplication.**
+Write a function that multiplies 2 matrices:
+- Prototype: `def matrix_mul(m_a, m_b):`
+- `m_a` and `m_b` must be validated with these requirements in this order
+- `m_a` and `m_b` must be an list of lists of integers or floats:
+	- if `m_a` or `m_b` is not a list: raise a `TypeError` exception with the message `m_a must be a list` or `m_b must be a list`
+	- if `m_a` or `m_b` is not a list of lists: raise a `TypeError` exception with the message `m_a must be a list of lists` or `m_b must be a list of lists`
+	- if `m_a` or `m_b` is empty (it means: = `[]` or = `[[]]`): raise a `ValueError` exception with the message `m_a can't be empty` or `m_b can't be empty`
+	- if one element of those list of lists is not an integer or a float: raise a `TypeError` exception with the message `m_a should contain only integers or floats` or `m_b should contain only integers or floats`
+	- if `m_a` or `m_b` is not a rectangle (all ‘rows’ should be of the same size): raise a `TypeError` exception with the message `each row of m_a must be of the same size` or `each row of m_b must be of the same size`
+- If `m_a` and `m_b` can’t be multiplied: raise a `ValueError` exception with the message `m_a and m_b can't be multiplied`
+- You are not allowed to import any module

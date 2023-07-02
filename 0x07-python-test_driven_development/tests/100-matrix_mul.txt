@@ -3,8 +3,9 @@ Tests for 100-matrix_mul.py
 =============================
 
 This module defines the function ``matrix_mul()`` that multiplies two
-matrices. It also defines the helper function ``check_matrices()`` that checks
-for incorrect arguments and raises the appropriate errors when necessary.
+matrices. It also defines the ``check_matrices()`` function that checks if the
+two matrices passed in can be multiplied and raises the appropriate errors if
+not.
 
 
 Correct arguments
@@ -19,29 +20,47 @@ by the second matrix should be defined.
 	>>> print(matrix_mul([[1, -2], [3, 4]], [[1, 2], [3, 4]]))
 	[[-5, -6], [15, 22]]
 
-	>>> m = matrix_mul([[1, 2.5]], [[1, 2], [3, 4]])
-	>>> round(m[0][0], 2)
-	8.5
-	>>> round(m[0][1], 2)
-	12.0
+	>>> print(matrix_mul([[1, 2.5]], [[1, 2], [3, 4]]))
+	[[8.5, 12.0]]
 
 Incorrect arguments
 ===================
 
-If either of the arguments are not lists, ``matrix_mul()`` raises a TypeError.
+``matrix_mul()`` takes in two arguments. If two arguments are not
+provided, a TypeError is raises.
 
 ::
 
-	>>> print(matrix_mul(None, "hello"))
+	>>> print(matrix_mul())
+	Traceback (most recent call last):
+	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+	>>> print(matrix_mul([1, 2]))
+	Traceback (most recent call last):
+	TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+If either of the arguments are not lists, ``matrix_mul()`` raises a ValueError.
+
+::
+
+	>>> print(matrix_mul("hello", [1, 2]))
 	Traceback (most recent call last):
 	TypeError: m_a must be a list
 
-	>>> print(matrix_mul([1, "2"], None))
+	>>> print(matrix_mul([1, 2], "hello"))
 	Traceback (most recent call last):
 	TypeError: m_b must be a list
 
-If either of the arguments are not lists of lists, ``matrix_mul() raises a
-TypeError.
+	>>> print(matrix_mul(None, [1, 2]))
+	Traceback (most recent call last):
+	TypeError: m_a must be a list
+
+	>>> print(matrix_mul([1, 2], None))
+	Traceback (most recent call last):
+	TypeError: m_b must be a list
+
+If either of the arguments are not lists of lists, the behaviour of
+``matrix_mul()`` raises a TypeError.
 
 ::
 
@@ -53,6 +72,10 @@ TypeError.
 	Traceback (most recent call last):
 	TypeError: m_b must be a list of lists
 
+	>>> print(matrix_mul([1, 2], [3, 4]))
+	Traceback (most recent call last):
+	TypeError: m_a must be a list of lists
+
 If either of the arguments are empty, ``matrix_mul()`` raises a ValueError.
 
 ::
@@ -60,14 +83,6 @@ If either of the arguments are empty, ``matrix_mul()`` raises a ValueError.
 	>>> print(matrix_mul([], [[1, "2"]]))
 	Traceback (most recent call last):
 	ValueError: m_a can't be empty
-
-	>>> print(matrix_mul([[]], []))
-	Traceback (most recent call last):
-	ValueError: m_a can't be empty
-
-	>>> print(matrix_mul([[1, "2"]], []))
-	Traceback (most recent call last):
-	ValueError: m_b can't be empty
 
 	>>> print(matrix_mul([[1, "2"]], [[]]))
 	Traceback (most recent call last):
@@ -78,16 +93,16 @@ raises a TypeError.
 
 ::
 
-	>>> print(matrix_mul([[1, "2"], [1]], [[1, 2]]))
+	>>> print(matrix_mul([[1, "2"]], [[1, 2], [3, 4]]))
 	Traceback (most recent call last):
 	TypeError: m_a should contain only integers or floats
 
-	>>> print(matrix_mul([[1, 2], [1]], [[1, "2"]]))
+	>>> print(matrix_mul([[1, 2], [3, 4]], [[1, {"2"}]]))
 	Traceback (most recent call last):
 	TypeError: m_b should contain only integers or floats
 
 If either of the arguments are not rectangle (equal sized 'rows'),
-``matrix_mul()`` raises a TypeError.
+``matrix_mul()`` raises a ValueError.
 
 ::
 

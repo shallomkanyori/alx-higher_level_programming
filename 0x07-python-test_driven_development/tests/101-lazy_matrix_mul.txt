@@ -58,7 +58,7 @@ If either of the arguments are  None, ``lazy_matrix_mul()`` raises a TypeError.
 	Traceback (most recent call last):
 	TypeError: Object arrays are not currently supported
 
-	>>> print(lazy_matrix_mul([1, ], None))
+	>>> print(lazy_matrix_mul([1, 2], None))
 	Traceback (most recent call last):
 	TypeError: Object arrays are not currently supported
 

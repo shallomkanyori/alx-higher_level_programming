@@ -67,3 +67,12 @@ Write a function that multiplies 2 matrices by using the module [NumPy](https://
 To install it: pip3 install numpy==1.15.0
 - Prototype: `def lazy_matrix_mul(m_a, m_b):`
 - Test cases should be the same as `100-matrix_mul` but with new exception type/message
+
+**Task 8: CPython #3: Python Strings**
+Create a function that prints Python strings.
+- Prototype: `void print_python_string(PyObject *p);`
+- If `p` is not a valid string, print an error message
+About:
+- Python version: 3.4
+- You are allowed to use the C standard library
+- Your shared library will be compiled with this command line: `gcc -shared -Wl,-soname,libPython.so -o libPython.so -fPIC -I/usr/include/python3.4 102-python.c`

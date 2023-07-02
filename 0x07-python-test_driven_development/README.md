@@ -61,3 +61,9 @@ Write a function that multiplies 2 matrices:
 	- if `m_a` or `m_b` is not a rectangle (all ‘rows’ should be of the same size): raise a `TypeError` exception with the message `each row of m_a must be of the same size` or `each row of m_b must be of the same size`
 - If `m_a` and `m_b` can’t be multiplied: raise a `ValueError` exception with the message `m_a and m_b can't be multiplied`
 - You are not allowed to import any module
+
+**Task 7: Lazy matrix multiplication.**
+Write a function that multiplies 2 matrices by using the module [NumPy](https://numpy.org/)
+To install it: pip3 install numpy==1.15.0
+- Prototype: `def lazy_matrix_mul(m_a, m_b):`
+- Test cases should be the same as `100-matrix_mul` but with new exception type/message

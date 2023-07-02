@@ -1,0 +1,130 @@
+=============================
+Tests for 101-lazy_matrix_mul.py
+=============================
+
+This module defines the function ``lazy_matrix_mul()`` that multiplies two
+matrices using the module NumPy.
+
+
+Correct arguments
+=================
+
+Both arguments passed to ``lazy_matrix_mul()`` must be a non-empty list of equal
+length non-empty lists of numbers and matrix multiplication of the first matrix
+by the second matrix should be defined.
+
+::
+	>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+	>>> print(lazy_matrix_mul([[1, -2], [3, 4]], [[1, 2], [3, 4]]))
+	[[-5 -6]
+	 [15 22]]
+
+	>>> print(lazy_matrix_mul([[1, 2.5]], [[1, 2], [3, 4]]))
+	[[ 8.5 12. ]]
+
+Incorrect arguments
+===================
+
+``lazy_matrix_mul()`` takes in two arguments. If two arguments are not
+provided, a TypeError is raises.
+
+::
+
+	>>> print(lazy_matrix_mul())
+	Traceback (most recent call last):
+	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+	>>> print(lazy_matrix_mul([1, 2]))
+	Traceback (most recent call last):
+	TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+If either of the arguments are not lists, ``lazy_matrix_mul()`` raises a ValueError.
+
+::
+
+	>>> print(lazy_matrix_mul("hello", [1, 2]))
+	Traceback (most recent call last):
+	ValueError: Scalar operands are not allowed, use '*' instead
+
+	>>> print(lazy_matrix_mul([1, 2], "hello"))
+	Traceback (most recent call last):
+	ValueError: Scalar operands are not allowed, use '*' instead
+
+If either of the arguments are  None, ``lazy_matrix_mul()`` raises a TypeError.
+
+::
+
+	>>> print(lazy_matrix_mul(None, [1, 2]))
+	Traceback (most recent call last):
+	TypeError: Object arrays are not currently supported
+
+	>>> print(lazy_matrix_mul([1, ], None))
+	Traceback (most recent call last):
+	TypeError: Object arrays are not currently supported
+
+If either of the arguments are not lists of lists, the behaviour of
+``lazy_matrix_mul()`` is undefined.
+
+::
+
+	>>> print(lazy_matrix_mul([1, "2"], ["1", 2, 3]))
+	Traceback (most recent call last):
+	ValueError: shapes (2,) and (3,) not aligned: 2 (dim 0) != 3 (dim 0)
+
+	>>> print(lazy_matrix_mul([[]], ["1", 2, 3]))
+	Traceback (most recent call last):
+	ValueError: shapes (1,0) and (3,) not aligned: 0 (dim 1) != 3 (dim 0)
+
+	>>> print(lazy_matrix_mul([1, 2], [3, 4]))
+	11
+
+If either of the arguments are empty, ``lazy_matrix_mul()`` raises a ValueError.
+
+::
+
+	>>> print(lazy_matrix_mul([], [[1, "2"]]))
+	Traceback (most recent call last):
+	ValueError: shapes (0,) and (1,2) not aligned: 0 (dim 0) != 1 (dim 0)
+
+	>>> print(lazy_matrix_mul([[1, "2"]], [[]]))
+	Traceback (most recent call last):
+	ValueError: shapes (1,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+
+If any element in either matrix is not an integer of a float, ``lazy_matrix_mul()``
+raises a TypeError.
+
+::
+
+	>>> print(lazy_matrix_mul([[1, "2"]], [[1, 2], [3, 4]]))
+	Traceback (most recent call last):
+	TypeError: invalid data type for einsum
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, {"2"}]]))
+	Traceback (most recent call last):
+	TypeError: Object arrays are not currently supported
+
+If either of the arguments are not rectangle (equal sized 'rows'),
+``lazy_matrix_mul()`` raises a ValueError.
+
+::
+
+	>>> print(lazy_matrix_mul([[1, 2], [1]], [[1, 2.5]]))
+	Traceback (most recent call last):
+	ValueError: setting an array element with a sequence.
+
+	>>> print(lazy_matrix_mul([[1, 2, 3.85], [3, 4.9, 5]], [[1, 2], [3, 4, 5]]))
+	Traceback (most recent call last):
+	ValueError: setting an array element with a sequence.
+
+If the first argument cannot be multiplied with the second argument,
+``lazy_matrix_mul()`` raises a ValueError.
+
+::
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2]]))
+	Traceback (most recent call last):
+	ValueError: shapes (2,2) and (1,2) not aligned: 2 (dim 1) != 1 (dim 0)
+
+	>>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2, 3], [4, 5, 6], [7, 8, 9]]))
+	Traceback (most recent call last):
+	ValueError: shapes (2,2) and (3,3) not aligned: 2 (dim 1) != 3 (dim 0)

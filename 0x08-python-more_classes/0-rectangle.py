@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defien the empty class Rectangle."""
+"""This module defines the empty class Rectangle."""
 
 
 class Rectangle():

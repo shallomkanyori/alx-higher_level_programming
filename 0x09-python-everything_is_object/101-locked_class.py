@@ -9,6 +9,10 @@ class LockedClass(object):
     first_name.
     """
 
+    def __init__(self):
+        """Does nothing."""
+        pass
+
     def __setattr__(self, key, value):
         if key != "first_name":
             err_msg = "'{}' object has no attribute '{}'".format(

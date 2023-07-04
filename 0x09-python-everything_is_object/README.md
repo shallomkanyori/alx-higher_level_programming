@@ -232,3 +232,7 @@ Will the last line of this script print `139926795932424`? Answer with `Yes` or 
 Write a function `magic_string()` that returns a string “BestSchool” n times the number of the iteration:
 - Your file should be maximum 4-line long (no documentation needed)
 - You are not allowed to import any module
+
+**Task 30: Low memory cost.**
+Write a class `LockedClass` with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called `first_name`.
+- You are not allowed to import any module

@@ -36,10 +36,18 @@ In the following code, do `a` and `b` point to the same object? Answer with `Yes
 >>> b = a + 1
 ```
 
-**Task 6: Is equal**
+**Task 6: Is equal.**
 What do these 3 lines print?
 ```
 >>> s1 = "Best School"
 >>> s2 = s1
 >>> print(s1 == s2)
+```
+
+**Task 7: Is the same.**
+What do these 3 lines print?
+```
+>>> s1 = "Best"
+>>> s2 = s1
+>>> print(s1 is s2)
 ```

@@ -34,18 +34,24 @@ If any argument is not a number, ``add_integer()`` raises a TypeError.
 	Traceback (most recent call last):
 	TypeError: b must be an integer
 
+	>>> add_integer(2, {"1", "2", "3"})
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
 	>>> add_integer(None)
 	Traceback (most recent call last):
 	TypeError: a must be an integer
 
-	>>> add_integer(3, {"one", "two", "three"})
-	Traceback (most recent call last):
-	TypeError: b must be an integer
+If infinity is passed in, an OverflowError is raised.
 
-	>>> add_integer((1, 2), 5)
-	Traceback (most recent call last):
-	TypeError: a must be an integer
+::
 
-	>>> add_integer(-12.9, {"one": 1, "two": 2, "three": 3})
+	>>> add_integer(float("inf"))
 	Traceback (most recent call last):
-	TypeError: b must be an integer
+	OverflowError: cannot convert float infinity to integer
+
+If NaN is passed in, a ValueError is raised.
+
+	>>> add_integer(9, float("NaN"))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer

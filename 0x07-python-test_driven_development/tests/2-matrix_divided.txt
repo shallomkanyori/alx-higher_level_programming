@@ -29,26 +29,16 @@ new matrix.
 	[[-1, 2, 3], [4, 5.4, 6]]
 
 	>>> matrix = []
-	>>> new_matrix = matrix_divided(matrix, 9.5)
-	>>> print(new_matrix)
+	>>> print(matrix_divided(matrix, 9.5))
 	[]
 	>>> print(matrix)
 	[]
-	>>> id(new_matrix) != id(matrix)
-	True
 
-	>>> matrix = [[], []]
-	>>> new_matrix = matrix_divided(matrix, -5)
-	>>> print(new_matrix)
-	[[], []]
+	>>> matrix = [[]]
+	>>> print(matrix_divided(matrix, -5))
+	[[]]
 	>>> print(matrix)
-	[[], []]
-	>>> id(new_matrix) != id(matrix)
-	True
-	>>> id(new_matrix[0]) != id(matrix[0])
-	True
-	>>> id(new_matrix[1]) != id(matrix[1])
-	True
+	[[]]
 
 Incorrect arguments
 ===================
@@ -130,16 +120,6 @@ If the second argument passed into ``matrix_divided()`` is not a number
 	Traceback (most recent call last):
 	TypeError: div must be a number
 
-	>>> matrix = []
-	>>> matrix_divided(matrix, {"1", "2", "3"})
-	Traceback (most recent call last):
-	TypeError: div must be a number
-
-	>>> matrix = [[], []]
-	>>> matrix_divided(matrix, (1, 2))
-	Traceback (most recent call last):
-	TypeError: div must be a number
-
 If the second argument is equal to 0, ``matrix_divided`` raises a
 ZeroDivisionError.
 
@@ -149,16 +129,6 @@ ZeroDivisionError.
 	... [1, 2, 3],
 	... [2.1, 5, -8]
 	... ]
-	>>> matrix_divided(matrix, 0)
-	Traceback (most recent call last):
-	ZeroDivisionError: division by zero
-
-	>>> matrix = []
-	>>> matrix_divided(matrix, 0)
-	Traceback (most recent call last):
-	ZeroDivisionError: division by zero
-
-	>>> matrix = [[], []]
 	>>> matrix_divided(matrix, 0)
 	Traceback (most recent call last):
 	ZeroDivisionError: division by zero

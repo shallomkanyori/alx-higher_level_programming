@@ -9,7 +9,8 @@ with two new-lines after each of these characters: [. ? :].
 Strings
 =================
 
-The text argument passed into ``text_indentation()`` must be a string.
+The text argument passed into ``text_indentation()`` must be a string. No
+spaces are printed at the beginning or at the end of each printed line.
 
 ::
 

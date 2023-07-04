@@ -181,3 +181,11 @@ Is `a` a tuple? Answer with `Yes` or `No`.
 a = (1, )
 ```
 Is `a` a tuple? Answer with `Yes` or `No`.
+
+**Task 24: Who I am?**
+What does this script print?
+```
+a = (1)
+b = (1)
+a is b
+```

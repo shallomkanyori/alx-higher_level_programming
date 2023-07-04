@@ -2,7 +2,7 @@
 """This module defines the LockedClass class."""
 
 
-class LockedClass():
+class LockedClass(object):
     """This class prevents dynamic creation of most instance attributes.
 
     It prevents the dynamic creation of attributes that are not called
@@ -15,4 +15,4 @@ class LockedClass():
                     type(self).__name__, key)
             raise AttributeError(err_msg)
 
-        self.__dict__[key] = value
+        object.__setattr__(self, key, value)

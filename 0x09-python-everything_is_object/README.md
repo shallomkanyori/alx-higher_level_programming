@@ -124,7 +124,18 @@ What does this script print?
 def increment(n):
     n += 1
 
-    a = 1
-    increment(a)
-    print(a)
+a = 1
+increment(a)
+print(a)
+```
+
+**Task 17: List incrementation.**
+What does this script print?
+```
+def increment(n):
+    n.append(4)
+
+l = [1, 2, 3]
+increment(l)
+print(l)
 ```

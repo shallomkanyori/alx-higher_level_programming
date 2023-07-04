@@ -197,3 +197,11 @@ a = (1, 2)
 b = (1, 2)
 a is b
 ```
+
+**Task 26: Empty is not empty.**
+What does this script print?
+```
+a = ()
+b = ()
+a is b
+```

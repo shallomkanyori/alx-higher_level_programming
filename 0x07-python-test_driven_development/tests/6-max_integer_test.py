@@ -11,9 +11,11 @@ class TestMaxInteger(unittest.TestCase):
         """Tests max integer for sequence types."""
         self.assertEqual(max_integer([1, 2, 2.5, 3, 4]), 4)
         self.assertEqual(max_integer((-4, 14, 20, 88, -90)), 88)
+        self.assertEqual(max_integer([10]), 10)
         self.assertEqual(max_integer("hello"), 'o')
         self.assertEqual(max_integer(b"hello"), 111)
         self.assertEqual(max_integer(range(-10, 0, 2)), -2)
+        self.assertEqual(max_integer([4, 3, 2, 1]), 4)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(), None)
 

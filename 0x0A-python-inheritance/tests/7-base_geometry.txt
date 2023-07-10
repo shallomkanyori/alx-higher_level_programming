@@ -4,12 +4,7 @@ Tests for 7-base_geometry.py
 
 This module defines the class ``BaseGeometry``. The class defines the
 unimplemented method ``area()`` as well as the method ``integer_validation()``
-that validate a value. These test are for the ``integer_validation()``
-function.
-
-
-Correct arguments
-=================
+that validate a value.
 
 ``integer_validation()`` takes in two arguments, a name and a value. The name
 is assumed to always be a string. The value should be an integer greater than 0.
@@ -23,10 +18,6 @@ is assumed to always be a string. The value should be an integer greater than 0.
 	>>> bg.integer_validator("width", 89)
 
 	>>> bg.integer_validator("", 100)
-
-
-Incorrect arguments
-===================
 
 If the second argument, the value, is not an integer, ``integer_validation()``
 raises a TypeError.
@@ -45,6 +36,10 @@ raises a TypeError.
 	Traceback (most recent call last):
 	TypeError: temp must be an integer
 
+	>>> bg.integer_validator("attr", None)
+	Traceback (most recent call last):
+	TypeError: attr must be an integer
+
 If the second argument, the value, is less than or equal to 0,
 ``integer_validation()`` raises a ValueError.
 
@@ -57,3 +52,23 @@ If the second argument, the value, is less than or equal to 0,
 	>>> bg.integer_validator("age", 0)
 	Traceback (most recent call last):
 	ValueError: age must be greater than 0
+
+``integer_validation()`` takes in two arguments.
+
+::
+
+	>>> bg.integer_validator("temp")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+``area()`` is not implemented.
+
+::
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented

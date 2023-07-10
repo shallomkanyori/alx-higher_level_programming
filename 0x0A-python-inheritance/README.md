@@ -30,3 +30,8 @@ Write a function that returns `True` if the object is an instance of a class tha
 **Task 5: Geometry module.**
 Write an empty class `BaseGeometry`.
 - You are not allowed to import any module
+
+**Task 6: Improve Geometry.**
+Write a class `BaseGeometry` (based on `5-base_geometry.py`).
+- Public instance method: `def area(self):` that raises an `Exception` with the message `area() is not implemented`
+- You are not allowed to import any module

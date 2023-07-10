@@ -41,6 +41,10 @@ raises a TypeError.
 	Traceback (most recent call last):
 	TypeError: position must be an integer
 
+	>>> bg.integer_validator("temp", 12.5)
+	Traceback (most recent call last):
+	TypeError: temp must be an integer
+
 If the second argument, the value, is less than or equal to 0,
 ``integer_validation()`` raises a ValueError.
 

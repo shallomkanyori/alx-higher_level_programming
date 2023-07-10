@@ -73,3 +73,9 @@ Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`). (task 
 	- `size` must be a positive integer, validated by `integer_validator`
 - the `area()` method must be implemented
 - `print()` should print, and `str()` should return, the square description: `[Square] <width>/<height>`
+
+
+**Task 12: My integer.**
+Write a class `MyInt` that inherits from `int`:
+- `MyInt` is a rebel. `MyInt` has `==` and `!=` operators inverted
+- You are not allowed to import any module

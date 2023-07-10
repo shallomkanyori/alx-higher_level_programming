@@ -52,6 +52,10 @@ raises a TypeError.
 	Traceback (most recent call last):
 	TypeError: dict must be an integer
 
+	>>> bg.integer_validator("set", {1, 2})
+	Traceback (most recent call last):
+	TypeError: set must be an integer
+
 If the second argument, the value, is less than or equal to 0,
 ``integer_validation()`` raises a ValueError.
 

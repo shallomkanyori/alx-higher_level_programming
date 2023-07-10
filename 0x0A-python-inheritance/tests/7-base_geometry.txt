@@ -44,6 +44,14 @@ raises a TypeError.
 	Traceback (most recent call last):
 	TypeError: bool must be an integer
 
+	>>> bg.integer_validator("list", [50])
+	Traceback (most recent call last):
+	TypeError: list must be an integer
+
+	>>> bg.integer_validator("dict", {"1": 1, "2": 2})
+	Traceback (most recent call last):
+	TypeError: dict must be an integer
+
 If the second argument, the value, is less than or equal to 0,
 ``integer_validation()`` raises a ValueError.
 

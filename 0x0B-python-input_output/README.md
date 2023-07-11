@@ -28,3 +28,8 @@ Write a function that appends a string at the end of a text file (`UTF8`) and re
 Write a function that returns the JSON representation of an object (string):
 - Prototype: `def to_json_string(my_obj):`
 - You don’t need to manage exceptions if the object can’t be serialized
+
+**Task 4: From JSON string to Object.**
+Write a function that returns an object (Python data structure) represented by a JSON string:
+- Prototype: `def from_json_string(my_str):`
+- You don’t need to manage exceptions if the JSON string doesn’t represent an object

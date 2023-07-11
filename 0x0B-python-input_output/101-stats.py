@@ -1,9 +1,20 @@
 #!/usr/bin/python3
-"""This module is a script that reads from stdin and computes metrics."""
+"""This module is a script that reads stdin and computes metrics."""
 import sys
 
 
-if __name__ == "__main__":
+def print_info(total_size, codes):
+    """Prints metrics.
+
+        Args:
+            total_size (int): the total size of all files so far.
+            codes (dict): the frequency count of the status codes.
+    """
+    print(f"File size: {total_size}")
+    [print(f"{k}: {codes[k]}") for k in sorted(codes.keys()) if codes[k] != 0]
+
+
+def main():
     lines = 0
     total_size = 0
     codes = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0,
@@ -17,12 +28,12 @@ if __name__ == "__main__":
 
             lines += 1
             if lines % 10 == 0:
-                print(f"File size: {total_size}")
-                [print(f"{k}: {codes[k]}") for k in sorted(codes.keys())
-                    if codes[k] != 0]
+                print_info(total_size, codes)
 
     except KeyboardInterrupt:
-        print(f"File size: {total_size}")
-        [print(f"{k}: {codes[k]}") for k in sorted(codes.keys())
-            if codes[k] != 0]
+        print_info(total_size, codes)
         raise
+
+
+if __name__ == "__main__":
+    main()

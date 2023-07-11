@@ -62,3 +62,13 @@ Write a function that returns the dictionary description with simple data struct
 - `obj` is an instance of a Class
 - All attributes of the `obj` Class are serializable: list, dictionary, string, integer and boolean
 - You are not allowed to import any module
+
+**Task 9: Student to Json.**
+Write a class `Student` that defines a student by:
+- Public instance attributes:
+	- `first_name`
+	- `last_name`
+	- `age`
+- Instantiation with `first_name`, `last_name` and `age`: `def __init__(self, first_name, last_name, age):`
+- Public method `def to_json(self):` that retrieves a dictionary representation of a `Student` instance (same as `8-class_to_json.py`)
+- You are not allowed to import any module

@@ -14,7 +14,7 @@ def print_info(total_size, codes):
     [print(f"{k}: {codes[k]}") for k in sorted(codes.keys()) if codes[k] != 0]
 
 
-def main():
+if __name__ == "__main__":
     lines = 0
     total_size = 0
     codes = {"200": 0, "301": 0, "400": 0, "401": 0, "403": 0,
@@ -22,18 +22,24 @@ def main():
 
     try:
         for line in sys.stdin:
-            words = line.split(" ")
-            total_size += int(words[-1])
-            codes[words[-2]] += 1
+            words = line.split()
+
+            try:
+                total_size += int(words[-1])
+            except (IndexError, ValueError):
+                pass
+
+            try:
+                codes[words[-2]] += 1
+            except (KeyError, IndexError):
+                pass
 
             lines += 1
             if lines % 10 == 0:
                 print_info(total_size, codes)
 
+        print_info(total_size, codes)
+
     except KeyboardInterrupt:
         print_info(total_size, codes)
         raise
-
-
-if __name__ == "__main__":
-    main()

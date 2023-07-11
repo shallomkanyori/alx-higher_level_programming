@@ -40,3 +40,10 @@ Write a function that writes an Object to a text file, using a JSON representati
 - You must use the `with` statement
 - You don’t need to manage exceptions if the object can’t be serialized.
 - You don’t need to manage file permission exceptions.
+
+**Task 6: Create object from a JSON file.**
+Write a function that creates an Object from a “JSON file”:
+- Prototype: `def load_from_json_file(filename):`
+- You must use the `with` statement
+- You don’t need to manage exceptions if the JSON string doesn’t represent an object.
+- You don’t need to manage file permissions / exceptions.

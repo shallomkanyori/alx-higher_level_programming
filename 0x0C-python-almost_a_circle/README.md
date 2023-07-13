@@ -1,9 +1,9 @@
 ## Python - Almost a circle
 
-###### Task 0: If it's not tested it doesn't work.
+#### Task 0: If it's not tested it doesn't work.
 All your files, classes and methods must be unit tested and be PEP 8 validated.
 
-###### Task 1:  Base class
+#### Task 1:  Base class
 Write the first class `Base`:
 
 Create a folder named models with an empty file `__init__.py` inside - with this file, the folder will become a Python package
@@ -17,7 +17,7 @@ Create a file named models/base.py:
 
 This class will be the “base” of all other classes in this project. The goal of it is to manage `id` attribute in all your future classes and to avoid duplicating the same code.
 
-###### Task 2: First Rectangle
+#### Task 2: First Rectangle
 Write the class `Rectangle` that inherits from `Base`:
 - In the file `models/rectangle.py`
 - Private instance attributes, each with its own public getter and setter:
@@ -28,3 +28,9 @@ Write the class `Rectangle` that inherits from `Base`:
 - Class constructor: `def __init__(self, width, height, x=0, y=0, id=None):`
 	- Call the super class with `id` - this super call with use the logic of the `__init__` of the `Base` class
 	- Assign each argument `width`, `height`, `x` and `y` to the right attribute
+
+#### Task 3: Validate attributes
+Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded):
+- If the input is not an integer, raise the `TypeError` exception with the message: `<name of the attribute> must be an integer`. Example: `width must be an integer`
+- If `width` or `height` is under or equals 0, raise the `ValueError` exception with the message: `<name of the attribute> must be > 0`. Example: `width must be > 0`
+- If `x` or `y` is under 0, raise the `ValueError` exception with the message: `<name of the attribute> must be >= 0`. Example: `x must be >= 0`

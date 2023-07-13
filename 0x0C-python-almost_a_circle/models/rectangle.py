@@ -9,6 +9,9 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes a rectangle.
 
+            All arguments other than 'id' are validated by the integer_validator
+            function.
+
             Args:
                 width (int): the width of the rectangle.
                 height (int): the height of the rectangle.
@@ -29,6 +32,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.integer_validator("width", value, False)
         self.__width = value
 
     @property
@@ -38,6 +42,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self.integer_validator("height", value, False)
         self.__height = value
 
     @property
@@ -47,6 +52,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self.integer_validator("x", value, True)
         self.__x = value
 
     @property
@@ -56,4 +62,26 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self.integer_validator("y", value, True)
         self.__y = value
+
+    def integer_validator(self, name, value, positive_0):
+        """Validates integer attibutes.
+
+            Args:
+                name (str): the name of the attribute.
+                value (int): the value of the attribute.
+                positive_0 (bool): if True, consider 0 positive. Otherwise,
+                                   don't consider 0 positive.
+
+            Raises:
+                TypeError: if value is not an integer.
+                ValueError: if value is not positive.
+        """
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+
+        if not positive_0 and value <= 0:
+            raise ValueError(f"{name} must be > 0")
+        elif positive_0 and value < 0:
+            raise ValueError(f"{name} must be >= 0")

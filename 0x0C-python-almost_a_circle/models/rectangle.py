@@ -9,8 +9,8 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes a rectangle.
 
-            All arguments other than 'id' are validated by the integer_validator
-            function.
+            All arguments other than 'id' are validated by the
+            integer_validator function.
 
             Args:
                 width (int): the width of the rectangle.
@@ -24,6 +24,10 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    def __str__(self):
+        return f"""[Rectangle] ({self.id}) {self.x}/{self.y} - \
+{self.width}/{self.height}"""
 
     @property
     def width(self):

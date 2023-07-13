@@ -41,5 +41,8 @@ Update the class `Rectangle` by adding the public method `def area(self):` that 
 #### Task 5: Display #0
 Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
 
-#### Task 6: `__str__`
+#### Task 6: \_\_str\_\_
 Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
+
+#### Task 7: Display #1
+Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character `#` by taking care of `x` and `y`.

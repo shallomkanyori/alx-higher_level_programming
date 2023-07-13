@@ -100,3 +100,15 @@ class Rectangle(Base):
             print("")
 
         print((" " * self.x + "#" * self.width + "\n") * self.height, end="")
+
+    def update(self, *args):
+        """Updates the rectangles attributes.
+
+            Args:
+                *args: a variable list of the values of the attributes to
+                       update in this order: id, width, height, x, y.
+        """
+        attrs = ["id", "width", "height", "x", "y"]
+
+        for i, val in enumerate(args):
+            setattr(self, attrs[i], val)

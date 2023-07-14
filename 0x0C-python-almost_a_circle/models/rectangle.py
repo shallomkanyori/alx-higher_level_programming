@@ -101,14 +101,20 @@ class Rectangle(Base):
 
         print((" " * self.x + "#" * self.width + "\n") * self.height, end="")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the rectangles attributes.
 
             Args:
                 *args: a variable list of the values of the attributes to
                        update in this order: id, width, height, x, y.
+                **kwargs: a variable length dictionary of key-value pairs of
+                          the attributes to update and their new values.
         """
-        attrs = ["id", "width", "height", "x", "y"]
+        if (args is not None and len(args) > 0):
+            attrs = ["id", "width", "height", "x", "y"]
 
-        for i, val in enumerate(args):
-            setattr(self, attrs[i], val)
+            for i, val in enumerate(args):
+                setattr(self, attrs[i], val)
+        else:
+            for attr, val in kwargs.items():
+                setattr(self, attr, val)

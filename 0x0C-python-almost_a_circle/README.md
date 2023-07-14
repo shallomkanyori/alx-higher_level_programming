@@ -54,3 +54,9 @@ Update the class `Rectangle` by adding the public method `def update(self, *args
 - 3rd argument should be the `height` attribute
 - 4th argument should be the `x` attribute
 - 5th argument should be the `y` attribute
+
+#### Task 9: Update #1
+Update the class `Rectangle` by updating the public method `def update(self, *args):` by changing the prototype to `update(self, *args, **kwargs)` that assigns a key/value argument to attributes:
+- `**kwargs` can be thought of as a double pointer to a dictionary: key/value
+- `**kwargs` must be skipped if `*args` exists and is not empty
+- Each key in this dictionary represents an attribute to the instance

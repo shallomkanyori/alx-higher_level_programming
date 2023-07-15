@@ -69,3 +69,8 @@ Write the class `Square` that inherits from `Rectangle`:
 	- You must not create new attributes for this class, use all attributes of `Rectangle` - a Square is a Rectangle with the same width and height
 	- All `width`, `height`, `x` and `y` validation must inherit from `Rectangle` - same behavior in case of wrong data
 - The overloading `__str__` method should return `[Square] (<id>) <x>/<y> - <size>` - in our case, `width` or `height`
+
+### Task 11: Square size
+Update the class `Square` by adding the public getter and setter `size`
+- The setter should assign (in this order) the `width` and the `height` - with the same value
+- The setter should have the same value validation as the `Rectangle` for `width` and `height` - No need to change the exception error message (It should be the one from `width`)

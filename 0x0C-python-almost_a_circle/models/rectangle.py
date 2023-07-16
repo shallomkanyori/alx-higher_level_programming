@@ -110,7 +110,7 @@ class Rectangle(Base):
                 **kwargs: a variable length dictionary of key-value pairs of
                           the attributes to update and their new values.
         """
-        if (args is not None and len(args) > 0):
+        if len(args) > 0:
             attrs = ["id", "width", "height", "x", "y"]
 
             for i, val in enumerate(args):

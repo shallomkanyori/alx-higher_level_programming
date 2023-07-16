@@ -146,6 +146,42 @@ class TestSquare(unittest.TestCase):
         expected = {"id": 12, "size": 19, "x": 5, "y": 4}
         self.assertEqual(s3_dict, expected)
 
+    def test_to_json_string(self):
+        """Test the to_json_string Base class static method."""
+
+        list_dicts = [{"id": 1, "size": 1, "x": 1, "y": 1}]
+        expected = '[{"id": 1, "size": 1, "x": 1, "y": 1}]'
+        self.assertEqual(Square.to_json_string(list_dicts), expected)
+
+        list_dicts = None
+        expected = "[]"
+        self.assertEqual(Square.to_json_string(list_dicts), expected)
+
+        list_dicts = []
+        expected = "[]"
+        self.assertEqual(Square.to_json_string(list_dicts), expected)
+
+    def test_to_json_string_invalid_arguments(self):
+        """Tests invalid arguments to the to_json_string method.
+
+            to_json_string takes in one argument but no validation is performed
+            to ensure that it is a list of dictionaries.So the behaviour in
+            this case is undefined.
+        """
+
+        self.assertEqual(Square.to_json_string("hello"), '"hello"')
+        self.assertEqual(Square.to_json_string((1, 2)), '[1, 2]')
+        self.assertEqual(Square.to_json_string({"1": 1, "2": 2}),
+                         '{"1": 1, "2": 2}')
+        self.assertEqual(Square.to_json_string(1), '1')
+        self.assertEqual(Square.to_json_string(2.5), '2.5')
+        self.assertEqual(Square.to_json_string([1, 2, 3]), '[1, 2, 3]')
+        self.assertEqual(Base.to_json_string(["h", "e", "f"]),
+                         '["h", "e", "f"]')
+
+        self.assertRaises(TypeError, Square.to_json_string, {1, 2, 3})
+        self.assertRaises(TypeError, Square.to_json_string)
+
     def test_save_to_file(self):
         """Tests the save_to_file Base class method."""
 

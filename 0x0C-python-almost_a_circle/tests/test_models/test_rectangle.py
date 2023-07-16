@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Unittests for rectangle.py."""
 import unittest
+import json
 from unittest.mock import patch
 from io import StringIO
 from models.rectangle import Rectangle
@@ -181,3 +182,42 @@ class TestRectangle(unittest.TestCase):
         r2_dict = r2.to_dictionary()
         expected = {"id": 2, "width": 1, "height": 1, "x": 0, "y": 0}
         self.assertEqual(r2_dict, expected)
+
+    def test_save_to_file(self):
+        """Tests the save_to_file class method."""
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        Rectangle.save_to_file([r1, r2])
+        expected = ('[{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, '
+                    '{"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]')
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(json.loads(file.read()), json.loads(expected))
+
+        r1.update(height=15, y=2)
+        r2.update(1, 2, 3)
+        Rectangle.save_to_file([r1, r2])
+        expected = ('[{"y": 2, "x": 2, "id": 1, "width": 10, "height": 15}, '
+                    '{"y": 0, "x": 0, "id": 1, "width": 2, "height": 3}]')
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(json.loads(file.read()), json.loads(expected))
+
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_from_json_string(self):
+        """Tests the from_json_string method."""
+        list_input = [
+            {'id': 89, 'width': 10, 'height': 4},
+            {'id': 7, 'width': 1, 'height': 7}
+        ]
+        json_list_input = Rectangle.to_json_string(list_input)
+        list_output = Rectangle.from_json_string(json_list_input)
+        self.assertEqual(list_output, list_input)
+
+        self.assertEqual(Rectangle.from_json_string(None), [])
+        self.assertEqual(Rectangle.from_json_string([]), [])

@@ -2,6 +2,7 @@
 """Unittests for square.py"""
 from io import StringIO
 import unittest
+import json
 from unittest.mock import patch
 from models.square import Square
 from models.base import Base
@@ -144,3 +145,35 @@ class TestSquare(unittest.TestCase):
         s3_dict = s3.to_dictionary()
         expected = {"id": 12, "size": 19, "x": 5, "y": 4}
         self.assertEqual(s3_dict, expected)
+
+    def test_save_to_file(self):
+        """Tests the save_to_file Base class method."""
+
+        s1 = Square(10)
+        s2 = Square(1, 2, 3, 9)
+        Square.save_to_file([s1, s2])
+        expected = ('[{"size": 10, "id": 1, "x": 0, "y": 0}, '
+                    '{"size": 1, "x": 2, "y": 3, "id": 9}]')
+        with open("Square.json", "r") as file:
+            self.assertEqual(json.loads(file.read()), json.loads(expected))
+
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_from_json_string(self):
+        """Tests the from_json_string method."""
+        list_input = [
+            {'id': 89, 'size': 4},
+            {'id': 7, 'size': 7, 'x': 30, 'y': 40}
+        ]
+        json_list_input = Square.to_json_string(list_input)
+        list_output = Square.from_json_string(json_list_input)
+        self.assertEqual(list_output, list_input)
+
+        self.assertEqual(Square.from_json_string(None), [])
+        self.assertEqual(Square.from_json_string([]), [])

@@ -67,8 +67,8 @@ class TestBase(unittest.TestCase):
         expected = "[]"
         self.assertEqual(Base.to_json_string(list_dicts), expected)
 
-    def test_to_json_string_arguments(self):
-        """Tests arguments to the to_json_string method.
+    def test_to_json_string_invalid_arguments(self):
+        """Tests invalid arguments to the to_json_string method.
 
             to_json_string takes in one argument but no validation is performed
             to ensure that it is a list of dictionaries.So the behaviour in

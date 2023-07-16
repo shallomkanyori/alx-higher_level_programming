@@ -213,3 +213,29 @@ class TestSquare(unittest.TestCase):
 
         self.assertEqual(Square.from_json_string(None), [])
         self.assertEqual(Square.from_json_string([]), [])
+
+    def test_create(self):
+        """Tests the Base class create class method."""
+
+        s1_dict = {"size": 3, "y": 5, "x": 1}
+        s1 = Square.create(**s1_dict)
+        self.assertEqual(str(s1), "[Square] (1) 1/5 - 3")
+
+        s2 = Square.create()
+        self.assertEqual(str(s2), "[Square] (2) 0/0 - 1")
+
+    def test_create_invalid_arguments(self):
+        """Make sure errors are raised for invalid attributes."""
+
+        self.assertRaisesRegex(TypeError, "^width must be an integer$",
+                               Square.create, width="hello")
+        self.assertRaisesRegex(ValueError, "^width must be > 0$",
+                               Square.create, width=0)
+        self.assertRaisesRegex(TypeError, "^x must be an integer$",
+                               Square.create, x=[1, 2])
+        self.assertRaisesRegex(ValueError, "^x must be >= 0$",
+                               Square.create, x=-4)
+        self.assertRaisesRegex(TypeError, "^y must be an integer$",
+                               Square.create, y={"set", "set2"})
+        self.assertRaisesRegex(ValueError, "^y must be >= 0$",
+                               Square.create, id=15, size=2, y=-3)

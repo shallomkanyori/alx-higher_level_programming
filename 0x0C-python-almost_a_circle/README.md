@@ -122,3 +122,13 @@ Update the class `Base` by adding the static method `def from_json_string(json_s
 - `json_string` is a string representing a list of dictionaries
 - If `json_string` is `None` or empty, return an empty list
 - Otherwise, return the list represented by `json_string`
+
+#### Task 18: Dictionary to Instance
+Update the class `Base` by adding the class method `def create(cls, **dictionary):` that returns an instance with all attributes already set:
+- `**dictionary` can be thought of as a double pointer to a dictionary
+- To use the `update` method to assign all attributes, you must create a “dummy” instance before:
+	- Create a `Rectangle` or `Square` instance with “dummy” mandatory attributes (width, height, size, etc.)
+	- Call `update` instance method to this “dummy” instance to apply your real values
+- You must use the method `def update(self, *args, **kwargs)`
+- `**dictionary` must be used as `**kwargs` of the method `update`
+- You are not allowed to use `eval`

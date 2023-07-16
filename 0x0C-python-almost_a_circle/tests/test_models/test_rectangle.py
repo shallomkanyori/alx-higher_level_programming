@@ -257,3 +257,33 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(Rectangle.from_json_string(None), [])
         self.assertEqual(Rectangle.from_json_string([]), [])
+
+    def test_create(self):
+        """Tests the Base class create class method."""
+
+        r1_dict = {"width": 3, "height": 5, "x": 1}
+        r1 = Rectangle.create(**r1_dict)
+        self.assertEqual(str(r1), "[Rectangle] (1) 1/0 - 3/5")
+
+        r2 = Rectangle.create()
+        self.assertEqual(str(r2), "[Rectangle] (2) 0/0 - 1/1")
+
+    def test_create_invalid_arguments(self):
+        """Make sure errors are raised for invalid attributes."""
+
+        self.assertRaisesRegex(TypeError, "^width must be an integer$",
+                               Rectangle.create, width="hello")
+        self.assertRaisesRegex(ValueError, "^width must be > 0$",
+                               Rectangle.create, width=0)
+        self.assertRaisesRegex(TypeError, "^height must be an integer$",
+                               Rectangle.create, height=12.5)
+        self.assertRaisesRegex(ValueError, "^height must be > 0$",
+                               Rectangle.create, height=-5)
+        self.assertRaisesRegex(TypeError, "^x must be an integer$",
+                               Rectangle.create, x=[1, 2])
+        self.assertRaisesRegex(ValueError, "^x must be >= 0$",
+                               Rectangle.create, x=-4)
+        self.assertRaisesRegex(TypeError, "^y must be an integer$",
+                               Rectangle.create, y={"set", "set2"})
+        self.assertRaisesRegex(ValueError, "^y must be >= 0$",
+                               Rectangle.create, id=15, height=2, y=-3)

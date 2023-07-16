@@ -44,3 +44,15 @@ class Base():
 
         with open(filename, "w", encoding="utf-8") as f:
             f.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of a JSON string representation.
+
+            Args:
+                json_string (str): the JSON string representation.
+        """
+        if not json_string:
+            return []
+
+        return json.loads(json_string)

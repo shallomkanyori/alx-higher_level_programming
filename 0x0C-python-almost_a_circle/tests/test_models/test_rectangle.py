@@ -11,7 +11,7 @@ class TestRectangle(unittest.TestCase):
     """Tests the Rectangle class."""
 
     def setUp(self):
-        """Reset the private Base class attribute instance counter."""
+        """Reset the Base class private attribute instance counter."""
         Base._Base__nb_objects = 0
 
     def test_init(self):
@@ -163,3 +163,21 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(r1), "[Rectangle] (1) 0/0 - 1/2")
 
         self.assertRaises(IndexError, r1.update, 1, 2, 3, 4, 5, 6)
+
+    def test_to_dictionaru(self):
+        """Test the to_dictionary method."""
+
+        r1 = Rectangle(10, 2, 1, 9)
+        r1_dict = r1.to_dictionary()
+        expected = {"id": 1, "width": 10, "height": 2, "x": 1, "y": 9}
+        self.assertEqual(r1_dict, expected)
+
+        r1.update(10, 20, 30, 40)
+        r1_dict = r1.to_dictionary()
+        expected = {"id": 10, "width": 20, "height": 30, "x": 40, "y": 9}
+        self.assertEqual(r1_dict, expected)
+
+        r2 = Rectangle(1, 1)
+        r2_dict = r2.to_dictionary()
+        expected = {"id": 2, "width": 1, "height": 1, "x": 0, "y": 0}
+        self.assertEqual(r2_dict, expected)

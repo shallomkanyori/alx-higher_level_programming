@@ -74,3 +74,21 @@ class Base():
 
         inst.update(**dictionary)
         return inst
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of intances after loading them from a file."""
+
+        filename = cls.__name__ + ".json"
+
+        try:
+            with open(filename, encoding="utf-8") as f:
+                list_dicts = Base.from_json_string(f.read())
+        except FileNotFoundError:
+            return []
+        else:
+            res = []
+            for d in list_dicts:
+                res.append(cls.create(**d))
+
+            return res

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Unittests for square.py"""
 from io import StringIO
+import os
 import unittest
 import json
 from unittest.mock import patch
@@ -201,6 +202,8 @@ class TestSquare(unittest.TestCase):
         with open("Square.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
+        os.remove("./Square.json")
+
     def test_from_json_string(self):
         """Tests the from_json_string method."""
         list_input = [
@@ -239,3 +242,22 @@ class TestSquare(unittest.TestCase):
                                Square.create, y={"set", "set2"})
         self.assertRaisesRegex(ValueError, "^y must be >= 0$",
                                Square.create, id=15, size=2, y=-3)
+
+    def test_load_from_file(self):
+        """Tests the Base class load_from_file class method."""
+
+        self.assertEqual(Square.load_from_file(), [])
+
+        s1 = Square(5)
+        s2 = Square(7, 9, 1)
+        list_sq_in = [s1, s2]
+        Square.save_to_file(list_sq_in)
+        list_sq_out = Square.load_from_file()
+
+        self.assertEqual(len(list_sq_out), 2)
+        if list_sq_out[0].id == s1.id:
+            self.assertEqual(str(list_sq_out[0]), str(s1))
+            self.assertEqual(str(list_sq_out[1]), str(s2))
+        else:
+            self.assertEqual(str(list_sq_out[1]), str(s1))
+            self.assertEqual(str(list_sq_out[0]), str(s2))

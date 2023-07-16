@@ -2,6 +2,7 @@
 """Unittests for rectangle.py."""
 import unittest
 import json
+import os
 from unittest.mock import patch
 from io import StringIO
 from models.rectangle import Rectangle
@@ -245,6 +246,8 @@ class TestRectangle(unittest.TestCase):
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
+        os.remove("./Rectangle.json")
+
     def test_from_json_string(self):
         """Tests the from_json_string method."""
         list_input = [
@@ -287,3 +290,22 @@ class TestRectangle(unittest.TestCase):
                                Rectangle.create, y={"set", "set2"})
         self.assertRaisesRegex(ValueError, "^y must be >= 0$",
                                Rectangle.create, id=15, height=2, y=-3)
+
+    def test_load_from_file(self):
+        """Tests the Base class load_from_file class method."""
+
+        self.assertEqual(Rectangle.load_from_file(), [])
+
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        list_rects_in = [r1, r2]
+        Rectangle.save_to_file(list_rects_in)
+        list_rects_out = Rectangle.load_from_file()
+
+        self.assertEqual(len(list_rects_out), 2)
+        if list_rects_out[0].id == r1.id:
+            self.assertEqual(str(list_rects_out[0]), str(r1))
+            self.assertEqual(str(list_rects_out[1]), str(r2))
+        else:
+            self.assertEqual(str(list_rects_out[1]), str(r1))
+            self.assertEqual(str(list_rects_out[0]), str(r2))

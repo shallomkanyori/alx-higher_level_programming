@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Unittests for square.py"""
+from io import StringIO
 import unittest
+from unittest.mock import patch
 from models.square import Square
 from models.base import Base
 
@@ -42,6 +44,41 @@ class TestSquare(unittest.TestCase):
                                Square, 10, 4, (1, 2))
         self.assertRaisesRegex(ValueError, "^y must be >= 0$",
                                Square, 10, 4, -3)
+
+    def test_area(self):
+        """Tests the area method."""
+
+        s1 = Square(3)
+        self.assertEqual(s1.area(), 9)
+
+        s2 = Square(8, 7, 0, 13)
+        self.assertEqual(s2.area(), 64)
+
+    def assert_output(self, sq, expected):
+        """Checks for expected output on stdout for the display method.
+
+            Args:
+                sq (Square): the square to display.
+                expected (str): the expected output.
+        """
+
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            sq.display()
+            self.assertEqual(fake_out.getvalue(), expected)
+
+    def test_display(self):
+        """Tests the display method."""
+        s1 = Square(5)
+        expected = "#####\n#####\n#####\n#####\n#####\n"
+        self.assert_output(s1, expected)
+
+        s2 = Square(3, 1, 2)
+        expected = "\n\n ###\n ###\n ###\n"
+        self.assert_output(s2, expected)
+
+        s3 = Square(1, 1, 0, 13)
+        expected = " #\n"
+        self.assert_output(s3, expected)
 
     def test_update(self):
         """Tests the square update method."""

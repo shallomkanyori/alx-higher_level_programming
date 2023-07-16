@@ -164,7 +164,7 @@ class TestRectangle(unittest.TestCase):
 
         self.assertRaises(IndexError, r1.update, 1, 2, 3, 4, 5, 6)
 
-    def test_to_dictionaru(self):
+    def test_to_dictionary(self):
         """Test the to_dictionary method."""
 
         r1 = Rectangle(10, 2, 1, 9)

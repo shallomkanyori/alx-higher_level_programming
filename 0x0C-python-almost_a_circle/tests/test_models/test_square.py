@@ -126,3 +126,21 @@ class TestSquare(unittest.TestCase):
                                s1.update, 15, 3, 0, 2.5)
         self.assertRaisesRegex(ValueError, "^y must be >= 0$",
                                s1.update, y=-9)
+
+    def test_to_dictionary(self):
+        """Tests the to_dictionary method."""
+
+        s1 = Square(10, 2, 1)
+        s1_dict = s1.to_dictionary()
+        expected = {"id": 1, "size": 10, "x": 2, "y": 1}
+        self.assertEqual(s1_dict, expected)
+
+        s2 = Square(15)
+        s2_dict = s2.to_dictionary()
+        expected = {"id": 2, "size": 15, "x": 0, "y": 0}
+        self.assertEqual(s2_dict, expected)
+
+        s3 = Square(19, 5, 4, 12)
+        s3_dict = s3.to_dictionary()
+        expected = {"id": 12, "size": 19, "x": 5, "y": 4}
+        self.assertEqual(s3_dict, expected)

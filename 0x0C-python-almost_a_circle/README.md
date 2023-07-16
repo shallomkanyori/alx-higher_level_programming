@@ -102,3 +102,9 @@ This dictionary must contain:
 - `size`
 - `x`
 - `y`
+
+#### Task 15: Dictionary to JSON string
+Update the class `Base` by adding the static method `def to_json_string(list_dictionaries):` that returns the JSON string representation of `list_dictionaries`:
+- `list_dictionaries` is a list of dictionaries
+- If `list_dictionaries` is `None` or empty, return the string: `"[]"`
+- Otherwise, return the JSON string representation of `list_dictionaries`

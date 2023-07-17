@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines the Base class."""
 import json
+import turtle
 import csv
 
 
@@ -131,3 +132,45 @@ class Base():
                 return [cls.create(**d) for d in res_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Opens a window and draws all the Rectangles and Squares.
+
+            Args:
+                list_rectangles (list of Rectangles): the list of the
+                                                    rectangles to draw.
+                list_squares (list of Squares): the list of squares to draw.
+        """
+        t = turtle.Turtle()
+        t.screen.bgcolor("#2c3032")
+        t.pensize(3)
+        t.shape("arrow")
+
+        t.color("#caeeba")
+        for r in list_rectangles:
+            t.showturtle()
+            t.up
+            t.goto(r.x, r.y)
+            t.down()
+
+            for _ in range(2):
+                t.forward(r.width)
+                t.left(90)
+                t.forward(r.height)
+                t.left(90)
+            t.hideturtle()
+
+        t.color("#debaee")
+        for s in list_squares:
+            t.show_turtle()
+            t.up()
+            t.goto(s.x, s.y)
+            t.down()
+
+            for _ in range(4):
+                t.forward(s.size)
+                t.left(90)
+            t.hideturtle()
+
+        t.exitonclick()

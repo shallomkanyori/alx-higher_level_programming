@@ -41,15 +41,21 @@ class Square(Rectangle):
                 **kwargs: variable dictionary of attributes to update and
                           their values.
         """
-        if len(args) > 0:
+        if args and len(args) > 0:
             attrs = ["id", "size", "x", "y"]
 
             for i, val in enumerate(args):
-                setattr(self, attrs[i], val)
+                if i < 4:
+                    setattr(self, attrs[i], val)
+                else:
+                    break
 
-        else:
-            for key, val in kwargs.items():
-                setattr(self, key, val)
+        elif kwargs:
+            for attr, val in kwargs.items():
+                if (attr == "id" and val is None):
+                    self.__init__(self.size, self.x, self.y)
+                elif attr in ["id", "size", "x", "y"]:
+                    setattr(self, attr, val)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Square."""

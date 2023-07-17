@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module defines the Base class."""
 import json
+import csv
 
 
 class Base():
@@ -84,11 +85,49 @@ class Base():
         try:
             with open(filename, encoding="utf-8") as f:
                 list_dicts = Base.from_json_string(f.read())
-        except FileNotFoundError:
+        except IOError:
             return []
         else:
-            res = []
-            for d in list_dicts:
-                res.append(cls.create(**d))
-
+            res = [cls.create(**d) for d in list_dicts]
             return res
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes a list of objects to a csv file.
+
+            Args:
+                list_objs: the list of objects.
+        """
+        filename = cls.__name__ + ".csv"
+        with open(filename, "w", newline='') as cf:
+            if not list_objs:
+                cf.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+
+                writer = csv.DictWriter(cf, fieldnames=fieldnames)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes objects from a csv file and returns them in a lsit."""
+
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, "r", newline='') as cf:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+
+                res_dicts = csv.DictReader(cf, fieldnames=fieldnames)
+                res_dicts = [dict([k, int(v)] for k, v in d.items())
+                             for d in res_dicts]
+
+                return [cls.create(**d) for d in res_dicts]
+        except IOError:
+            return []

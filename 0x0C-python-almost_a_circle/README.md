@@ -139,3 +139,11 @@ Update the class `Base` by adding the class method `def load_from_file(cls):` th
 - If the file doesn’t exist, return an empty list
 - Otherwise, return a list of instances - the type of these instances depends on `cls` (current class using this method)
 - You must use the `from_json_string` and `create` methods (implemented previously)
+
+#### Task 20. JSON ok, but CSV?
+Update the class Base by adding the class methods `def save_to_file_csv(cls, list_objs):` and `def load_from_file_csv(cls):` that serializes and deserializes in CSV:
+- The filename must be: `<Class name>.csv` - example: `Rectangle.csv`
+- Has the same behavior as the JSON serialization/deserialization
+- Format of the CSV:
+	- Rectangle: `<id>,<width>,<height>,<x>,<y>`
+	- Square: `<id>,<size>,<x>,<y>`

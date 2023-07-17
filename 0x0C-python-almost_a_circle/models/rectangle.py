@@ -110,14 +110,20 @@ class Rectangle(Base):
                 **kwargs: a variable length dictionary of key-value pairs of
                           the attributes to update and their new values.
         """
-        if len(args) > 0:
+        if args and len(args) > 0:
             attrs = ["id", "width", "height", "x", "y"]
 
             for i, val in enumerate(args):
-                setattr(self, attrs[i], val)
-        else:
+                if i < 5:
+                    setattr(self, attrs[i], val)
+                else:
+                    break
+        elif kwargs:
             for attr, val in kwargs.items():
-                setattr(self, attr, val)
+                if (attr == "id" and val is None):
+                    self.__init__(self.width, self.height, self.x, self.y)
+                elif attr in ["id", "width", "height", "x", "y"]:
+                    setattr(self, attr, val)
 
     def to_dictionary(self):
         """Returns the dictionary representation of a Rectangle."""

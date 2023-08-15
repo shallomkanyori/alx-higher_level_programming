@@ -72,3 +72,9 @@
 	- the `score`
 	- the number of records for this `score` with the label `number`
 - The list is sorted by the number of records (descending)
+
+#### Task 16: Say my name
+[16-no_link.sql](16-no_link.sql) lists all records of the table `second_table` (database `hbtn_0c_0`).
+- Doesn't list rows without a `name` value
+- Displays the score and the name (in this order)
+- Records are listed by descending score

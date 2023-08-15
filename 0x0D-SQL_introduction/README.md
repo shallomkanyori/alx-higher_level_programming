@@ -78,3 +78,10 @@
 - Doesn't list rows without a `name` value
 - Displays the score and the name (in this order)
 - Records are listed by descending score
+
+#### Task 17: Go to UTF8
+[100-move_to_utf8.sql](100-move_to_utf8.sql) converts `hbtn_0c_0` database to UTF8 (`utf8mb4`, collate `utf8mb4_unicode_ci`).
+Converts all of the following to `UTF8`:
+- Database `hbtn_0c_0`
+- Table `first_table`
+- Field `name` in `first_table`

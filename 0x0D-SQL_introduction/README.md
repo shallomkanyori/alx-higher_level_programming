@@ -90,3 +90,6 @@ Converts all of the following to `UTF8`:
 Import the `temperatures` table into `hbtn_0c_0` database.
 
 [101-avg_temperatures.sql](101-avg_temperatures.sql) displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
+
+#### Task 19: Temperatures #1
+[102-top_city.sql](102-top_city.sql) displays the top 3 of cities temperature during July and August ordered by temperature (descending).

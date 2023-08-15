@@ -50,3 +50,8 @@
 [10-top_score.sql](10-top_score.sql)  lists all records of the table `second_table` (database `hbtn_0c_0`)
 - Displays both the score and the name (in this order)
 - Records are ordered by score (top first)
+
+#### Task 11: Select the best
+[11-best_score.sql](11-best_score.sql) lists all records with a `score >= 10` in the table `second_table` (database `hbtn_0c_0`).
+- Displays both the score and the name (in this order)
+- Records are ordered by the score (top first)

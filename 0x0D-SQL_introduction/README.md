@@ -17,3 +17,7 @@
 - `first_table` description:
 	- `id` INT
 	- `name` VARCHAR(256)
+
+#### Task5 5: Full description
+[5-full_table.sql](5-full_table.sql) prints the full description of the table `first_table` from the current database (assumed to be `hbtn_0c_0`).
+- Does not use the `DESCRIBE` or `EXPLAIN` statements.

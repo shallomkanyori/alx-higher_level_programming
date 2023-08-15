@@ -55,3 +55,6 @@
 [11-best_score.sql](11-best_score.sql) lists all records with a `score >= 10` in the table `second_table` (database `hbtn_0c_0`).
 - Displays both the score and the name (in this order)
 - Records are ordered by the score (top first)
+
+#### Task 12: Cheating is bad
+[12-no_cheating.sql](12-no_cheating.sql) updates the score of Bob to `10` in the table `second_table`.

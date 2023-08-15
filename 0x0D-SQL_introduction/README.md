@@ -93,3 +93,6 @@ Import the `temperatures` table into `hbtn_0c_0` database.
 
 #### Task 19: Temperatures #1
 [102-top_city.sql](102-top_city.sql) displays the top 3 of cities temperature during July and August ordered by temperature (descending).
+
+#### Task 20: Temperatures #2
+[103-max_state.sql](103-max_state.sql) displays the max temperature of each state ordered by state name.

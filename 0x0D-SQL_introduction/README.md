@@ -30,3 +30,6 @@
 - New row:
 	- `id` = `89`
 	- `name` = `Best School`
+
+#### Task 8: Count 89
+[8-count_89.sql](8-count_89.sql) deisplays the number of records with `id = 89` in the table `first_table` (database `hbtn_0c_0`).

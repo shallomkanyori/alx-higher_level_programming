@@ -11,3 +11,9 @@
 
 #### Task 3: List tables
 [3-list_tables.sql](3-list_tables.sql) lists all the tables of the current database.
+
+###Task 4: First table
+[4-first_table.sql](4-first_table.sql) creates a table called `first_table` in the current database if it doesn't already exist.
+- `first_table` description:
+	- `id` INT
+	- `name` VARCHAR(256)

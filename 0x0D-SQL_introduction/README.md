@@ -58,3 +58,6 @@
 
 #### Task 12: Cheating is bad
 [12-no_cheating.sql](12-no_cheating.sql) updates the score of Bob to `10` in the table `second_table`.
+
+#### Task 13: Score too low
+[13-change_class.sql](13-change_class.sql) removes all records with a `score <= 5` in the table `second_table` (database `hbtn_0c_0`).

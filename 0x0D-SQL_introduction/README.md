@@ -65,3 +65,10 @@
 #### Task 14: Average
 [14-average.sql](14-average.sql) computes the score average of all records in the table `second_table` (database `hbtn_0c_0`).
 - The result column name is `average`.
+
+#### Task 15: Number by score
+[15-groups.sql](15-groups.sql) lists the number of records with the same score in the table `second_table` (database `hbtn_0c_0`).
+- The result displays:
+	- the `score`
+	- the number of records for this `score` with the label `number`
+- The list is sorted by the number of records (descending)

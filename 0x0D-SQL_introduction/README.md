@@ -21,3 +21,6 @@
 #### Task5 5: Full description
 [5-full_table.sql](5-full_table.sql) prints the full description of the table `first_table` from the current database (assumed to be `hbtn_0c_0`).
 - Does not use the `DESCRIBE` or `EXPLAIN` statements.
+
+#### Task 6: List all in table
+[6-list_values.sql](6-list_values.sql) lists all rows of the table `first_table` from the current database (assumed to be `hbtn_0c_0`).

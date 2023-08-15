@@ -85,3 +85,8 @@ Converts all of the following to `UTF8`:
 - Database `hbtn_0c_0`
 - Table `first_table`
 - Field `name` in `first_table`
+
+#### Task 18: Temperatures #0
+Import the `temperatures` table into `hbtn_0c_0` database.
+
+[101-avg_temperatures.sql](101-avg_temperatures.sql) displays the average temperature (Fahrenheit) by city ordered by temperature (descending).

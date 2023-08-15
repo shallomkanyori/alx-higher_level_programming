@@ -61,3 +61,7 @@
 
 #### Task 13: Score too low
 [13-change_class.sql](13-change_class.sql) removes all records with a `score <= 5` in the table `second_table` (database `hbtn_0c_0`).
+
+#### Task 14: Average
+[14-average.sql](14-average.sql) computes the score average of all records in the table `second_table` (database `hbtn_0c_0`).
+- The result column name is `average`.

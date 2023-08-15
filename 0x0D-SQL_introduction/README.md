@@ -45,3 +45,8 @@
 	- `id` = 2, `name` = "Alex", `score` = 3
 	- `id` = 3, `name` = "Bob", `score` = 14
 	- `id` = 4, `name` = "George", `score` = 8
+
+#### Task 10: List by best
+[10-top_score.sql](10-top_score.sql)  lists all records of the table `second_table` (database `hbtn_0c_0`)
+- Displays both the score and the name (in this order)
+- Records are ordered by score (top first)

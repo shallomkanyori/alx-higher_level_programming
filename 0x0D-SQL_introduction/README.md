@@ -24,3 +24,9 @@
 
 #### Task 6: List all in table
 [6-list_values.sql](6-list_values.sql) lists all rows of the table `first_table` from the current database (assumed to be `hbtn_0c_0`).
+
+#### Task 7: First add
+[7-insert_value.sql](7-insert_value.sql) inserts a new row in the table `first_table` (database `hbtn_0c_0`).
+- New row:
+	- `id` = `89`
+	- `name` = `Best School`

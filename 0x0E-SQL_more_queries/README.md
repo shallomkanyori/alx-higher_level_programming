@@ -112,3 +112,9 @@
 - Each record displays: `tv_shows.title`
 - Results are sorted in ascending order by the show title
 - Uses a maximum of two `SELECT` statement
+
+#### Task 19: Rotten tomatoes
+[102-rating_shows.sql](102-rating_shows.sql) lists all shows from `hbtn_0d_tvshows_rate` by their rating.
+- Each record displays: `tv_shows.title` - `rating sum`
+- Results are sorted in descending order by the rating
+- Uses only one `SELECT` statement

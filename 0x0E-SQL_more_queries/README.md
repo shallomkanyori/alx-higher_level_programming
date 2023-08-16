@@ -65,3 +65,10 @@
 - Results are sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
 - If a show doesn’t have a genre, displays NULL
 - Uses only one SELECT statement
+
+#### Task 12. No genre
+[12-no_genre.sql](12-no_genre.sql) lists all shows contained in the database `hbtn_0d_tvshows` without a genre linked.
+- Each record displays: `tv_shows.title` - `tv_show_genres.genre_id`
+- Results are sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
+- If a show doesn’t have a genre, displays NULL
+- Uses only one SELECT statement

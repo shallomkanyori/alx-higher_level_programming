@@ -58,3 +58,10 @@
 - Each record displays: `tv_shows.title` - `tv_show_genres.genre_id`
 - Results are sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
 - Uses only one SELECT statement
+
+#### Genre ID for all shows
+[11-genre_id_all_shows.sql](11-genre_id_all_shows.sql) lists all shows contained in the database `hbtn_0d_tvshows`.
+- Each record displays: `tv_shows.title` - `tv_show_genres.genre_id`
+- Results are sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
+- If a show doesn’t have a genre, displays NULL
+- Uses only one SELECT statement

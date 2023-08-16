@@ -85,3 +85,10 @@
 [14-my_genres.sql](14-my_genres.sql) lists all genres of the show `Dexter` by name from the `hbtn_0d_tvshows`.
 - Each record displays: `tv_genres.name`
 - Results are sorted in ascending order by the genre name
+- Uses only one `SELECT` statement
+
+#### Task 15: Only Comedy
+[15-comedy_only.sql](15-comedy_only.sql) lists all Comedy shows in the database `hbtn_0d_tvshows`.
+- Each record displays: `tv_shows.title`
+- Results area sorted in ascending order by the show title
+- Uses only one `SELECT` statement

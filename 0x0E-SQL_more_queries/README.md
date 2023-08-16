@@ -24,3 +24,9 @@
 - `id_not_null` description
 	- `id` INT with the default value `1`
 	- `name` VARCHAR(256)
+
+#### Task 5: Unique ID
+[5-unique_id.sql](5-unique_id.sql) creates the table `unique_id` in the current database if it doesn't already exist.
+- `unique_id` description
+	- id` INT with the default value `1` and must be unique
+	- `name` VARCHAR(256)

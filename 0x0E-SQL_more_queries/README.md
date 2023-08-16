@@ -36,3 +36,10 @@
 - `states` description
 	- `id` INT unique, auto generated, can't be null and is a primary key
 	- `name` VARCHAR(256) can't be null
+
+#### Task Cities table
+[7-cities.sql](7-cities.sql) creates the database `hbtn_0d_usa` and the table `cities` (in the database `hbtn_0d-usa`) if they don't already exist.
+- `cities` description
+	- `id` INT unique, auto generated, can't be null and is a primary key
+	- `state_id` INT, can't be null and must be a `FOREIGN KEY` that references `id` of the `states` table
+	- `name` VARCHAR(256) can't be null

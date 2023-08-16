@@ -99,3 +99,10 @@
 - Each record displays: `tv_shows.title` - `tv_genres.name`
 - Results are sorted in ascending order by the show title and genre name
 - Uses only one `SELECT` statement
+
+
+#### Task 17: Not my genre
+[100-not_my_genres.sql](100-not_my_genres.sql) list all genres not linked to the show `Dexter` from the `hbtn_0d_tvshows` database.
+- Each record displays: `tv_genres.name`
+- Results are sorted in ascending order by the genre name
+- Uses a maximum of two `SELECT` statement

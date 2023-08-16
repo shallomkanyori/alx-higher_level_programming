@@ -106,3 +106,9 @@
 - Each record displays: `tv_genres.name`
 - Results are sorted in ascending order by the genre name
 - Uses a maximum of two `SELECT` statement
+
+#### Task 18: No Comedy tonight!
+[101-not_a_comedy.sql](101-not_a_comedy.sql) lists all shows without the genre `Comedy` in the database `hbtn_0d_tvshows`.
+- Each record displays: `tv_shows.title`
+- Results are sorted in ascending order by the show title
+- Uses a maximum of two `SELECT` statement

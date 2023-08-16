@@ -72,3 +72,11 @@
 - Results are sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
 - If a show doesn’t have a genre, displays NULL
 - Uses only one SELECT statement
+
+#### Task 13: Number of shows by genre
+[13-count_shows_by_genre.sql](13-count_shows_by_genre.sql) lists all genres from `hbtn_0d_tvshows` and displays the number of shows linked to each.
+- Each record displays: `<TV Show genre>` - `<Number of shows linked to this genre>`
+- First column is called `genre`
+- Second column is called `number_of_shows`
+- Doesn’t display a genre that doesn’t have any shows linked
+- Results are sorted in descending order by the number of shows linked

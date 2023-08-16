@@ -80,3 +80,8 @@
 - Second column is called `number_of_shows`
 - Doesn’t display a genre that doesn’t have any shows linked
 - Results are sorted in descending order by the number of shows linked
+
+#### Task 14: My genres
+[14-my_genres.sql](14-my_genres.sql) lists all genres of the show `Dexter` by name from the `hbtn_0d_tvshows`.
+- Each record displays: `tv_genres.name`
+- Results are sorted in ascending order by the genre name

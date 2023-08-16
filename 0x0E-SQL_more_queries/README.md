@@ -18,3 +18,9 @@
 - `force_name` description
 	- `id` INT
 	- `name` VARCHAR(256) can't be null
+
+#### Task 4: ID can't be null
+[4-never_empty.sql](4-never_empty.sql) creates the table `id_not_null` in the current database if it doesn't already exist.
+- `id_not_null` description
+	- `id` INT with the default value `1`
+	- `name` VARCHAR(256)

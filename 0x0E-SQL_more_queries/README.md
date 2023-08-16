@@ -118,3 +118,9 @@
 - Each record displays: `tv_shows.title` - `rating sum`
 - Results are sorted in descending order by the rating
 - Uses only one `SELECT` statement
+
+#### Task 20: Best genre
+[103-rating_genres.sql](103-rating_genres.sql) lists all genres in the database `hbtn_0d_tvshows_rate` by their rating.
+- Each record displays: `tv_genres.name` - `rating sum`
+- Results are sorted in descending order by their rating
+- Uses only one `SELECT` statement

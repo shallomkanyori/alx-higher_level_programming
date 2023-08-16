@@ -52,3 +52,9 @@
 - Each record displays: `cities.id` - `cities.name` - `states.name`
 - Results are sorted in ascending order by `cities.id`
 - Uses only one SELECT statement
+
+#### Task 10: Genre ID by show
+[10-genre_id_by_show.sql](10-genre_id_by_show.sql) lists all shows in `hbtn_0d_tvshows` that have at least one genre linked.
+- Each record displays: `tv_shows.title` - `tv_show_genres.genre_id`
+- Results are sorted in ascending order by `tv_shows.title` and `tv_show_genres.genre_id`
+- Uses only one SELECT statement

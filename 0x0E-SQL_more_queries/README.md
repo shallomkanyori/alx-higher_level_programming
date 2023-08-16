@@ -28,5 +28,11 @@
 #### Task 5: Unique ID
 [5-unique_id.sql](5-unique_id.sql) creates the table `unique_id` in the current database if it doesn't already exist.
 - `unique_id` description
-	- id` INT with the default value `1` and must be unique
+	- `id` INT with the default value `1` and must be unique
 	- `name` VARCHAR(256)
+
+#### Task 6: States table
+[6-states.sql](6-states.sql) creates the database `hbtn_0d_usa` and the table `hbtn_0d_usa.states` if they don't already exist.
+- `states` description
+	- `id` INT unique, auto generated, can't be null and is a primary key
+	- `name` VARCHAR(256) can't be null

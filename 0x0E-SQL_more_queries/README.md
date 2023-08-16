@@ -46,3 +46,9 @@
 
 #### Task 8: Cities of California
 [8-cities_of_california_subquery.sql](8-cities_of_california_subquery.sql) lists all cities of California ordered by `cities.id` (ascending).
+
+#### Task 9: Cities by States
+[9-cities_by_state_join.sql](9-cities_by_state_join.sql) lists all cities in the database `hbtn_0d_usa`.
+- Each record displays: `cities.id` - `cities.name` - `states.name`
+- Results are sorted in ascending order by `cities.id`
+- Uses only one SELECT statement

@@ -43,3 +43,6 @@
 	- `id` INT unique, auto generated, can't be null and is a primary key
 	- `state_id` INT, can't be null and must be a `FOREIGN KEY` that references `id` of the `states` table
 	- `name` VARCHAR(256) can't be null
+
+#### Task 8: Cities of California
+[8-cities_of_california_subquery.sql](8-cities_of_california_subquery.sql) lists all cities of California ordered by `cities.id` (ascending).

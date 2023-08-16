@@ -6,4 +6,9 @@
 #### Task 1: Root user
 [1-create_user.sql](1-create_user.sql) creates the MySQL server user `user_0d_1` if this user doesn't already exist.
 - `user_0d_1` has all privileges on the server
-- `user_0d_1` password is `user_0d_1_pwd`
+- `user_0d_1` password is set to `user_0d_1_pwd`
+
+#### Task 2: Read user
+[2-create_read_user.sql](2-create_read_user.sql) creates the database `hbtn_0d_2` and the user `user_0d_2` if they don't already exist.
+- `user_0d_2` has only the SELECT privilege in the database `hbtn_0d_2`
+- The `user_0d_2` password is set to `user_0d_2_pwd`

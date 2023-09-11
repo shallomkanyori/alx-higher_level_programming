@@ -27,3 +27,9 @@
 #### Task 4
 [4-concat.js](4-concat.js) is a script that prints two arguments passed to it, in the following format: “ is ”
 - Uses `console.log(...)` to print all output
+
+#### Task 5
+[5-to_integer.js](5-to_integer.js) a script that prints `My number: <first argument converted in integer>` if the first argument can be converted to an integer:
+- If the argument can’t be converted to an integer, prints “Not a number”
+- Uses `console.log(...)` to print all output
+- Does not use `try/catch`

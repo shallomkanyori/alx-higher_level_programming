@@ -42,3 +42,10 @@
 - Uses `console.log(...)` to print all output
 - Does not use any `if/else` statement
 - Uses only one `console.log`
+
+#### Task 7
+[7-multi_c.js](7-multi_c.js) is a script that prints `x` times “C is fun”
+- Where `x` is the first argument of the script
+- If the first argument can’t be converted to an integer, prints “Missing number of occurrences”
+- Uses `console.log(...)` to print all output
+- Uses only two `console.log`

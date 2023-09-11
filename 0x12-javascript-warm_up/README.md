@@ -76,3 +76,6 @@
 - Assumes all arguments can be converted to integer
 - If no argument passed, prints `0`
 - If the number of arguments is `1`, prints `0`
+
+#### Task 12
+[12-object.js](12-object.js) updates a script to replace an object's property `value` that was `12` with the value `89`.

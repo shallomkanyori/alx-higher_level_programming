@@ -70,3 +70,9 @@
 - Factorial of `NaN` is `1`
 - Uses a recursive function
 - Uses `console.log(...)` to print all output
+
+#### Task 11
+[11-second_biggest.js](11-second_biggest.js) is a script that searches for the second biggest integer in the list of arguments.
+- Assumes all arguments can be converted to integer
+- If no argument passed, prints `0`
+- If the number of arguments is `1`, prints `0`

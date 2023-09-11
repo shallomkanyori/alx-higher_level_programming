@@ -49,3 +49,10 @@
 - If the first argument can’t be converted to an integer, prints “Missing number of occurrences”
 - Uses `console.log(...)` to print all output
 - Uses only two `console.log`
+
+#### Task 8
+[8-square.js](8-square.js) is a script that prints a square
+- The first argument is the size of the square
+- If the first argument can’t be converted to an integer, prints “Missing size”
+- Uses the character `X` to print the square
+- Uses `console.log(...)` to print all output

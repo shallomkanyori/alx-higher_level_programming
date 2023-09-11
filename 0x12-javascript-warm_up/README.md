@@ -17,3 +17,9 @@
 - If only one argument is passed to the script, prints “Argument found”
 - Otherwise, prints “Arguments found”
 - Uses `console.log(...)` to print all output
+
+#### Task 3
+[3-value_argument.js](3-value_argument.js) is a script that prints the first argument passed to it:
+- If no arguments are passed to the script, prints “No argument”
+- Uses `console.log(...)` to print all output
+- Does not use `length`

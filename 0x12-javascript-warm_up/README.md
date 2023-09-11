@@ -33,3 +33,12 @@
 - If the argument can’t be converted to an integer, prints “Not a number”
 - Uses `console.log(...)` to print all output
 - Does not use `try/catch`
+
+#### Task 6
+[6-multi_languages_loop.js](6-multi_languages_loop.js) is a script that prints 3 lines: (like `1-multi_languages.js`) but by using an array of string and a loop
+- The first line: “C is fun”
+- The second line: “Python is cool”
+- The third line: “JavaScript is amazing”
+- Uses `console.log(...)` to print all output
+- Does not use any `if/else` statement
+- Uses only one `console.log`

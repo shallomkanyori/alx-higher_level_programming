@@ -102,3 +102,8 @@ $ ./100-main.js
 [101-call_me_moby.js](101-call_me_moby.js) contains a function that executes `x` times a function.
 - The function is visible from outside
 - Prototype: `function (x, theFunction)`
+
+#### Task 16
+[102-add_me_maybe.js](102-add_me_maybe.js) contains a function that increments and calls a function.
+- The function is visible from outside
+- Prototype: `function (number, the Function)`

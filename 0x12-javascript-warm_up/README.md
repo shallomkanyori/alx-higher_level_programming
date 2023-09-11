@@ -107,3 +107,6 @@ $ ./100-main.js
 [102-add_me_maybe.js](102-add_me_maybe.js) contains a function that increments and calls a function.
 - The function is visible from outside
 - Prototype: `function (number, the Function)`
+
+#### Task 17
+[103-object_fct.js](103-object_fct.js) updates the given script by adding a new function `incr` to the object that increments its integer property `value`.

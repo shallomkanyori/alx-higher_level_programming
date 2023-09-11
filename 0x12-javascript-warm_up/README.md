@@ -79,3 +79,8 @@
 
 #### Task 12
 [12-object.js](12-object.js) updates a script to replace an object's property `value` that was `12` with the value `89`.
+
+#### Task 13
+[13-add.js](13-add.js) contains a function that returns the addition of 2 integers.
+- The function is visible from outside
+- The function's name is add

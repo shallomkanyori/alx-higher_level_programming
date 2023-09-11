@@ -63,3 +63,10 @@
 - The second argument is the second integer
 - Defines a function with this prototype: `function add(a, b)`
 - Uses `console.log(...)` to print all output
+
+#### Task 10
+[10-factorial.js](10-factorial.js) is a script that computes and prints a factorial
+- The first argument is an integer (argument can be cast as integer) used for computing the factorial
+- Factorial of `NaN` is `1`
+- Uses a recursive function
+- Uses `console.log(...)` to print all output

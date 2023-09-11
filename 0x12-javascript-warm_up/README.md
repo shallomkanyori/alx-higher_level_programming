@@ -23,3 +23,7 @@
 - If no arguments are passed to the script, prints “No argument”
 - Uses `console.log(...)` to print all output
 - Does not use `length`
+
+#### Task 4
+[4-concat.js](4-concat.js) is a script that prints two arguments passed to it, in the following format: “ is ”
+- Uses `console.log(...)` to print all output

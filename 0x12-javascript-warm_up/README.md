@@ -10,3 +10,10 @@
 - First: "C is fun"
 - Second: "Python is cool"
 - Third: "JavaScript is amazing"
+
+#### Task 2
+[2-arguments.js](2-arguments.js) is a script that prints a message depending of the number of arguments passed:
+- If no arguments are passed to the script, prints “No argument”
+- If only one argument is passed to the script, prints “Argument found”
+- Otherwise, prints “Arguments found”
+- Uses `console.log(...)` to print all output

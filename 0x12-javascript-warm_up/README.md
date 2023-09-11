@@ -84,3 +84,16 @@
 [13-add.js](13-add.js) contains a function that returns the addition of 2 integers.
 - The function is visible from outside
 - The function's name is add
+
+
+#### Task 14
+[100-let_me_const.js](100-let_me_const.js) modifies the value of `myVar` to `333`.
+```
+$ cat 100-main.js
+#!/usr/bin/node
+myVar = 89;
+require('./100-let_me_const')
+console.log(myVar);
+$ ./100-main.js
+333
+```

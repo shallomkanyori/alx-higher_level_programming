@@ -97,3 +97,8 @@ console.log(myVar);
 $ ./100-main.js
 333
 ```
+
+#### Task 15
+[101-call_me_moby.js](101-call_me_moby.js) contains a function that executes `x` times a function.
+- The function is visible from outside
+- Prototype: `function (x, theFunction)`

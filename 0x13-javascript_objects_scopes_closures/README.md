@@ -70,3 +70,10 @@
 - Prototype: `exports.converter = function (base)`
 - Does not import any file
 - Does not declare any new variable (`var`, `let`, etc..)
+
+#### Task 11
+[100-map.js](100-map.js) is a script that imports an array and computes a new array
+- Imports `list` from the file `100-data.js`
+- Uses a `map`
+- The new list is created with each value equal to the value of the initial list multiplied by the index in the list.
+- Prints both the initial list and the new list.

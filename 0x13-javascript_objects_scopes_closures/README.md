@@ -77,3 +77,11 @@
 - Uses a `map`
 - The new list is created with each value equal to the value of the initial list multiplied by the index in the list.
 - Prints both the initial list and the new list.
+
+#### Task 12
+[101-sorted.js](101-sorted.js) is a script that imports a dictionary of occurrences by user id and computes a dictionary of user ids by occurrence.
+- Imports `dict` from the file `101-data.js`
+- In the new dictionary:
+	- A key is a number of occurrences
+	- A value is the list of user ids
+- Prints the new dictionary at the end

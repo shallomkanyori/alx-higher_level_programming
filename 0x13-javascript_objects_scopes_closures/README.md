@@ -54,3 +54,8 @@
 #### Task 7
 [7-occurrences.js](7-occurrences.js) contains a function that returns the number of occurrences of an element in a list.
 - Prototype: `exports.nbOccurences = function (list, searchElement)`
+
+#### Task 8
+[8-esrever.js](8-esrever.js) contains a function that returns the reversed version of a list:
+- Prototype: `exports.esrever = function (list)`
+- Does not use the built-in method `reverse`

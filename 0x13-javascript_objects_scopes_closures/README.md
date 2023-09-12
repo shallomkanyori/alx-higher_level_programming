@@ -39,3 +39,9 @@
 	- `print()` that prints the rectangle using the character `X`
 	- `rotate()` that exchanges the `width` and the `height` of the rectangle
 	- `double()` that multiplies the `width` and the `height` of the rectangle by 2
+
+#### Task 5
+[5-square.js](5-square.js) contains a class `Square` that defines a square and inherits from `Rectangle` of [4-rectangle.js](4-rectangle.js):
+- Uses the `class` notation to define the class
+- The constructor takes 1 argument: `size`
+- The constructor calls the constructor of `Rectangle`

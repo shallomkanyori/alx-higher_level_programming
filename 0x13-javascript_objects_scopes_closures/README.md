@@ -64,3 +64,9 @@
 [9-logme.js](9-logme.js) exports a function that prints the number of arguments already printed and the new argument.
 - Prototype: `exports.logMe = function (item)`
 - Output format: `<number arguments already printed>: <current argument value>`
+
+#### Task 10
+[10-converter.js](10-converter.js) contains a function that converts a number from base 10 to another base passed as argument:
+- Prototype: `exports.converter = function (base)`
+- Does not import any file
+- Does not declare any new variable (`var`, `let`, etc..)

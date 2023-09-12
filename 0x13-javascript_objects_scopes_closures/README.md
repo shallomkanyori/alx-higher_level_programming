@@ -18,3 +18,12 @@
 - The `width` instance attribute is initialized with the value of `w`
 - The `height` instance attribute is initialized with the value of `h`
 - Creates an empty object if `w` or `h` is not a positive integer greater than 0
+
+#### Task 3
+[3-rectangle.js](3-rectangle.js) defines a class `Rectangle` that defines a rectangle:
+- Uses the `class` notation to define the class
+- The constructor takes 2 arguments `w` and `h`
+- The `width` instance attribute is initialized with the value of `w`
+- The `height` instance attribute is initialized with the value of `h`
+- Creates an empty object if `w` or `h` is not a positive integer greater than 0
+- Creates an instance method called `print()` that prints the rectangle using the character `X`

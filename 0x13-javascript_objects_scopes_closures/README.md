@@ -85,3 +85,9 @@
 	- A key is a number of occurrences
 	- A value is the list of user ids
 - Prints the new dictionary at the end
+
+#### Task 13
+[102-concat.js](102-concat.js) is a script that concats 2 files.
+- The first argument is the file path of the first source file
+- The second argument is the file path of the second source file
+- The third argument is the file path of the destination

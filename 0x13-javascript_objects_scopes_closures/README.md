@@ -52,10 +52,15 @@
 	- `charPrint(c)` - prints the square using the character `c` if not `undefined`. Otherwise, uses the character `X`.
 
 #### Task 7
-[7-occurrences.js](7-occurrences.js) contains a function that returns the number of occurrences of an element in a list.
+[7-occurrences.js](7-occurrences.js) exports a function that returns the number of occurrences of an element in a list.
 - Prototype: `exports.nbOccurences = function (list, searchElement)`
 
 #### Task 8
-[8-esrever.js](8-esrever.js) contains a function that returns the reversed version of a list:
+[8-esrever.js](8-esrever.js) exports a function that returns the reversed version of a list:
 - Prototype: `exports.esrever = function (list)`
 - Does not use the built-in method `reverse`
+
+#### Task 9
+[9-logme.js](9-logme.js) exports a function that prints the number of arguments already printed and the new argument.
+- Prototype: `exports.logMe = function (item)`
+- Output format: `<number arguments already printed>: <current argument value>`

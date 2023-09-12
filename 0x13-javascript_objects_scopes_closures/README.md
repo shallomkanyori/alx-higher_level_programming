@@ -50,3 +50,7 @@
 [6-square.js](6-square.js) contains a class `Square` that defines a square and inherits from `Square` of [5-square.js](5-square.js):
 - Instance method:
 	- `charPrint(c)` - prints the square using the character `c` if not `undefined`. Otherwise, uses the character `X`.
+
+#### Task 7
+[7-occurrences.js](7-occurrences.js) contains a function that returns the number of occurrences of an element in a list.
+- Prototype: `exports.nbOccurences = function (list, searchElement)`

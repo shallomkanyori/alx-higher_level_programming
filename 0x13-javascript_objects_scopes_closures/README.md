@@ -45,3 +45,8 @@
 - Uses the `class` notation to define the class
 - The constructor takes 1 argument: `size`
 - The constructor calls the constructor of `Rectangle`
+
+#### Task 6
+[6-square.js](6-square.js) contains a class `Square` that defines a square and inherits from `Square` of [5-square.js](5-square.js):
+- Instance method:
+	- `charPrint(c)` - prints the square using the character `c` if not `undefined`. Otherwise, uses the character `X`.

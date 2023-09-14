@@ -137,3 +137,18 @@
 - Connects to a MySQL server running on `localhost` at port `3306`
 - Results are sorted in ascending order by `cities.id`
 - Results are displayed one row per line in the format: `<state name>: (<city id>) <city name>`
+
+
+#### Task 15
+[relationship_city.py](relationship_city.py) and [relationship_state.py](relationship_state.py) improve on [model_city.py](model_city.py) and [model_state.py](model_state.py) using `relationships`:
+- `City` class:
+	- `state`: reference to its `State`
+- `State` class:
+	- `cities` relationship with the class `City`
+- Uses the module `SQLAlchemy`
+
+[100-relationship_states_cities.py](100-relationship_states_cities.py) is a script that creates the `State` “California” with the `City` “San Francisco” in the database (`hbtn_0e_100_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Uses the `cities` relationship for `State` objects

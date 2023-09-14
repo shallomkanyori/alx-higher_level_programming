@@ -86,3 +86,13 @@
 - Connects to a MySQL server running on `localhost` at port `3306`
 - Results are sorted in ascending order by `states.id`
 - Results are displayed one row per line
+
+#### Task 10
+[10-model_state_my_get.py](10-model_state_my_get.py) is a script that prints the `State` object with the `name` passed as argument from a database (`hbtn_0e_6_usa`)
+- Takes 4 arguments: `mysql username`, `mysql password`, `database name` and `state name to search` (MySQL injection free)
+- Uses the module `SQLAlchemy`
+- Imports `State` and `Base` from [model_state.py](model_state.py)
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Assumes there is only one record with the state name to search
+- Result displays the `states.id`
+- If no state has the name that was searched for, displays `Not found`

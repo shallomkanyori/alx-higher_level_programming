@@ -66,5 +66,14 @@
 - Uses the module `SQLAlchemy`
 - Imports `State` and `Base` from [model_state.py](model_state.py)
 - Connects to a MySQL server running on `localhost` at port `3306`
-- Results are sorted in ascending order by `cities.id`
+- Results are sorted in ascending order by `states.id`
 - Results are displayed one row per line
+
+#### Task 8
+[8-model_state_fetch_first.py](8-model_state_fetch_first.py) is a script that prints the first `State` object from a database (`hbtn_0e_6_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Imports `State` and `Base` from [model_state.py](model_state.py)
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Result is displayed as `<state.id>: <state.name>`
+- If the table `states` is empty, prints `Nothing` followed by a new line

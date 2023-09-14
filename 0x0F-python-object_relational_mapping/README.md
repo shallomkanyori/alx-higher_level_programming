@@ -152,3 +152,12 @@
 - Uses the module `SQLAlchemy`
 - Connects to a MySQL server running on `localhost` at port `3306`
 - Uses the `cities` relationship for `State` objects
+
+#### Task 16
+[101-relationship_states_cities_list.py](101-relationship_states_cities_list.py)  is  script that lists all `State` objects, and corresponding `City` objects, contained in a database (`hbtn_0e_101_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Uses only one query to the database
+- Uses the `cities` relationship for all `State` objects
+- Results are sorted in ascending order by `states.id` and `cities.id`

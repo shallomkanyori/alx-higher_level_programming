@@ -104,3 +104,11 @@
 - Imports `State` and `Base` from [model_state.py](model_state.py)
 - Connects to a MySQL server running on `localhost` at port `3306`
 - Prints the new `states.id` after creation
+
+#### Task 12
+[12-model_state_update_id_2.py](12-model_state_update_id_2.py) is a script that changes the name of a `State` object from a database (`hbtn_0e_6_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Imports `State` and `Base` from [model_state.py](model_state.py)
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Changes the name of the `State` where `id = 2` to `New Mexico`

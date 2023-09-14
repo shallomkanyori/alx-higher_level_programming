@@ -119,3 +119,21 @@
 - Uses the module `SQLAlchemy`
 - Imports `State` and `Base` from [model_state.py](model_state.py)
 - Connects to a MySQL server running on `localhost` at port `3306`
+
+#### Task 14
+[model_city.py](model_city.py) contains the class definition of a `City`
+- `City` class:
+	- inherits from `Base`
+	- links to the MySQL table `cities`
+	- class attribute `id` that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
+	- class attribute `name` that represents a column of a string with maximum 128 characters and can’t be null
+	- class attribute `state_id` that represents a column of an integer, can’t be null and is a foreign key to `states.id`
+- Uses the module `SQLAlchemy`
+
+[14-model_city_fetch_by_state.py](14-model_city_fetch_by_state.py) is a script that prints all `City` objects from the database (`hbtn_0e_14_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Imports `State` and `Base` from [model_state.py](model_state.py)
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Results are sorted in ascending order by `cities.id`
+- Results are displayed one row per line in the format: `<state name>: (<city id>) <city name>`

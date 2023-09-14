@@ -23,3 +23,12 @@
 - Connects to a MySQL server running on `localhost` at port `3306`
 - Results are sorted in ascending order by `states.id`
 - Results are displayed one row per line
+
+#### Task 3
+[3-my_safe_filter_states.py](3-my_safe_filter_states.py) is a script that once again takes in an argument and displays all values in the `states` table of a given database where `name` matches the argument. But this time, it is safe from MySQL injections.
+- Takes 4 arguments: `mysql username`, `mysql password`, `database name` and `state name searched` (safe from MySQL injection)
+- Uses the module `MySQLdb`
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Results are sorted in ascending order by `states.id`
+- Results are displayed one row per line
+

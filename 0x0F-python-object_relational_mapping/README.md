@@ -59,3 +59,12 @@
 	- class attribute `name` that represents a column of a string with maximum 128 characters and can’t be null
 - Uses the module `SQLAlchemy`
 - Scripts should connect to a MySQL server running on `localhost` at port `3306`
+
+#### Task 7
+[7-model_state_fetch_all.py](7-model_state_fetch_all.py) is a script that lists all `State` objects from a database (`hbtn_0e_6_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Imports `State` and `Base` from [model_state.py](model_state.py)
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Results are sorted in ascending order by `cities.id`
+- Results are displayed one row per line

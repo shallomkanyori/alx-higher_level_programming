@@ -49,3 +49,13 @@
 - Results are sorted in ascending order by `cities.id`
 - Uses `execute()` only once
 - Results are displayed separated by a comma and a space
+
+#### Task 6
+[model_state.py](model_state.py) contains the class definition of a `State` and an instance `Base = declarative_base()`:
+- `State` class:
+	- inherits from `Base`
+	- links to the MySQL table `states`
+	- class attribute `id` that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
+	- class attribute `name` that represents a column of a string with maximum 128 characters and can’t be null
+- Uses the module `SQLAlchemy`
+- Scripts should connect to a MySQL server running on `localhost` at port `3306`

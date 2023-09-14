@@ -40,3 +40,12 @@
 - Results are sorted in ascending order by `cities.id`
 - Uses `execute()` only once
 - Results are displayed one row per line
+
+#### Task 5
+[5-filter_cities.py](5-filter_cities.py) is a script that takes in the name of a `state` as an argument and lists all `cities` of that state, using the database (`hbtn_0e_4_usa`)
+- Takes 4 arguments: `mysql username`, `mysql password`, `database name` and `state name` (safe from MySQL injection)
+- Uses the module `MySQLdb`
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Results are sorted in ascending order by `cities.id`
+- Uses `execute()` only once
+- Results are displayed separated by a comma and a space

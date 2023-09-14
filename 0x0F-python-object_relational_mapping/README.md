@@ -96,3 +96,11 @@
 - Assumes there is only one record with the state name to search
 - Result displays the `states.id`
 - If no state has the name that was searched for, displays `Not found`
+
+#### Task 11
+[11-model_state_insert.py](11-model_state_insert.py) is a script that adds the `State` object “Louisiana” to a database (`hbtn_0e_6_usa`)
+- Takes 3 arguments: `mysql username`, `mysql password` and `database name`
+- Uses the module `SQLAlchemy`
+- Imports `State` and `Base` from [model_state.py](model_state.py)
+- Connects to a MySQL server running on `localhost` at port `3306`
+- Prints the new `states.id` after creation

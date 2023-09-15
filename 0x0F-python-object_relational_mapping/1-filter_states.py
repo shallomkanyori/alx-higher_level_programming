@@ -14,7 +14,9 @@ def main():
                            passwd=password, db=db_name, charset="utf8")
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("""SELECT * FROM states
+                    WHERE name LIKE BINARY 'N%'
+                    ORDER BY id ASC""")
     rows = cur.fetchall()
 
     for row in rows:

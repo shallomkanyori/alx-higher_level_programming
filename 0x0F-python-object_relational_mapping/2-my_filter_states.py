@@ -15,10 +15,9 @@ def main():
                            passwd=password, db=db_name, charset="utf8")
     cur = conn.cursor()
 
-    query = "SELECT * FROM {} WHERE name = '{}' ORDER BY {} ASC".format(
-            'states',
-            state_name,
-            'id')
+    query = """SELECT * FROM states
+                WHERE name = '{}'
+                ORDER BY id ASC""".format(state_name)
 
     cur.execute(query)
     rows = cur.fetchall()

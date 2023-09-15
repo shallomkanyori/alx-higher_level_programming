@@ -23,14 +23,15 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = (session.query(State)
-                    .options(joinedload(State.cities))
-                    .order_by(State.id))
+    states = (session.query(State)
+                     .options(joinedload(State.cities))
+                     .order_by(State.id)
+                     .all())
 
-    for state in query.all():
+    for state in states:
         print(f"{state.id}: {state.name}")
 
-        for city in sorted(state.cities, key=lambda c: c.id):
+        for city in state.cities:
             print(f"    {city.id}: {city.name}")
 
     session.close()

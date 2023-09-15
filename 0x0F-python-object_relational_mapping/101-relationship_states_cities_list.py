@@ -7,7 +7,7 @@ from relationship_state import State, Base
 from relationship_city import City
 
 from sqlalchemy import (create_engine)
-from sqlalchemy.orm import sessionmaker, selectinload
+from sqlalchemy.orm import sessionmaker, joinedload
 
 
 def main():
@@ -24,7 +24,7 @@ def main():
     session = Session()
 
     query = (session.query(State)
-                    .options(selectinload(State.cities))
+                    .options(joinedload(State.cities))
                     .order_by(State.id))
 
     for state in query.all():

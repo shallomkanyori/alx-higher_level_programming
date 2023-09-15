@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """This module defines the City class."""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from relationship_state import Base

@@ -22,3 +22,9 @@
 [4-header.sh](4-header.sh) is a Bash script that takes in a URL as an argument, sends a `GET` request to the URL, and displays the body of the response
 - Sends a header variable `X-School-User-Id` with the value `98`
 - Uses `curl`
+
+#### Task 5
+[5-post_params.sh](5-post_params.sh) is a Bash script that takes in a URL, sends a `POST` request to the passed URL, and displays the body of the response
+- The variable `email` is sent with the value `test@gmail.com`
+- The variable `subject` is sent with the value `I will always be here for PLD`
+- Uses `curl`

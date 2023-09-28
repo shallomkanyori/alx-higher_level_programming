@@ -17,3 +17,8 @@
 #### Task 3
 [3-methods.sh](3-methods.sh) is a Bash script that takes in a URL and displays all HTTP methods the server will accept.
 - Uses `curl`
+
+#### Task 4
+[4-header.sh](4-header.sh) is a Bash script that takes in a URL as an argument, sends a `GET` request to the URL, and displays the body of the response
+- Sends a header variable `X-School-User-Id` with the value `98`
+- Uses `curl`

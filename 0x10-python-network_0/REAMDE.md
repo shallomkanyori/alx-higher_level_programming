@@ -9,3 +9,7 @@
 [1-body.sh](1-body.sh) is a Bash script that takes in a URL, sends a `GET` request to the URL, and displays the body of the response
 - Displays only body of a `200` status code response
 - Uses `curl`
+
+#### Task 2
+[2-delete.sh](2-delete.sh) is a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response.
+- Uses `curl`

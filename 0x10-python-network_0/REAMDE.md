@@ -37,3 +37,10 @@
 - There may be more than one peak
 
 [6-peak.txt](6-peak.txt) contains the complexity of the algorithm: `O(log(n))`, `O(n)`, `O(nlog(n))` or `O(n2)`
+
+
+#### 7
+[100-status_code.sh](100-status_code.sh) is a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
+- Does not use any pipe, redirection, etc.
+- Does not use `;` and `&&`
+- Uses `curl`

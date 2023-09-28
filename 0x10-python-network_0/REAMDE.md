@@ -13,3 +13,7 @@
 #### Task 2
 [2-delete.sh](2-delete.sh) is a Bash script that sends a DELETE request to the URL passed as the first argument and displays the body of the response.
 - Uses `curl`
+
+#### Task 3
+[3-methods.sh](3-methods.sh) is a Bash script that takes in a URL and displays all HTTP methods the server will accept.
+- Uses `curl`

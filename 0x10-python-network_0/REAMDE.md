@@ -49,3 +49,8 @@
 [101-post_json.sh](101-post_json.sh) is a Bash script that sends a JSON `POST` request to a URL passed as the first argument, and displays the body of the response.
 - Sends a `POST` request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request
 - Uses `curl`
+
+#### Task 9
+[102-catch_me.sh](102-catch_me.sh) is  Bash script that makes a request to `0.0.0.0:5000/catch_me` that causes the server to respond with a message containing `You got me!`, in the body of the response.
+- Does not use `echo`, `cat`, etc. to display the final result
+- Uses `curl`

@@ -39,8 +39,13 @@
 [6-peak.txt](6-peak.txt) contains the complexity of the algorithm: `O(log(n))`, `O(n)`, `O(nlog(n))` or `O(n2)`
 
 
-#### 7
+#### Task 7
 [100-status_code.sh](100-status_code.sh) is a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
 - Does not use any pipe, redirection, etc.
 - Does not use `;` and `&&`
+- Uses `curl`
+
+#### Task 8
+[101-post_json.sh](101-post_json.sh) is a Bash script that sends a JSON `POST` request to a URL passed as the first argument, and displays the body of the response.
+- Sends a `POST` request with the contents of a file, passed with the filename as the second argument of the script, in the body of the request
 - Uses `curl`

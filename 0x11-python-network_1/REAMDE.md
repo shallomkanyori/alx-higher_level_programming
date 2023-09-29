@@ -49,3 +49,13 @@
 - If the HTTP status code is greater than or equal to 400, prints: `Error code: ` followed by the HTTP status code
 - Uses the packages `requests` and `sys` only
 - Does not check arguments passed (number or type)
+
+#### Task 8
+[8-json_api.py](8-json_api.py) is a Python script that takes in a letter and sends a `POST` request to `http://0.0.0.0:5000/search_user` with the letter as a parameter.
+- The letter is sent in the variable `q`
+- If no argument is given, sets `q=""`
+- If the response body is properly JSON formatted and not empty, displays the `id` and `name` as: `[<id>] <name>`
+- Otherwise:
+	- Displays `Not a valid JSON` if the JSON is invalid
+	- Displays `No result` if the JSON is empty
+- Uses the packages `requests` and `sys` only

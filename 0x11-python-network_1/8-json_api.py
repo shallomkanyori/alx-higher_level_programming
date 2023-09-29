@@ -15,12 +15,12 @@ if __name__ == "__main__":
 
     res = requests.post(url, data={"q": letter})
 
-    if res.status_code == 204:
-        print("No result")
-
-    else:
-        try:
-            obj = res.json()
+    try:
+        obj = res.json()
+        if not obj:
+            print("No result")
+        else:
             print(f"[{obj.id}] {obj.name}")
-        except requests.exceptions.JSONDecodeError:
-            print("Not a valid JSON")
+
+    except requests.exceptions.JSONDecodeError:
+        print("Not a valid JSON")

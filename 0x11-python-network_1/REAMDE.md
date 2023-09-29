@@ -31,3 +31,9 @@
 [4-hbtn_status.py](4-hbtn_status.py) is a Python script that fetches `https://alx-intranet.hbtn.io/status`
 - Uses the package `requests` only
 - The body of the response is displayed formatted
+
+#### Task 5
+[5-hbtn_header.py](5-hbtn_header.py) is a Python script that takes in a URL, sends a request to the URL and displays the value of the `X-Request-Id` varible in the response header.
+- Uses the packages `requests` and `sys` only
+- The value of this variable is different for each request
+- Does not check arguments passed (number or type)

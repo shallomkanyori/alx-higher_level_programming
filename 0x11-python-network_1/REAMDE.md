@@ -43,3 +43,9 @@
 - The email is sent in the `email` variable
 - Uses the packages `requests` and `sys` only
 - Does not check arguments passed (number or type)
+
+#### Task 7
+[7-error_code.py](7-error_code.py) is a Python script that takes in a URL, sends a request to the URL and displays the body of the response.
+- If the HTTP status code is greater than or equal to 400, prints: `Error code: ` followed by the HTTP status code
+- Uses the packages `requests` and `sys` only
+- Does not check arguments passed (number or type)

@@ -26,3 +26,8 @@
 - Uses the packages `urllib` and `sys` only
 - Does not check arguments passed (number or type)
 - Uses a `with` statement
+
+#### Task 4
+[4-hbtn_status.py](4-hbtn_status.py) is a Python script that fetches `https://alx-intranet.hbtn.io/status`
+- Uses the package `requests` only
+- The body of the response is displayed formatted

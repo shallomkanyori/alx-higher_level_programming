@@ -19,3 +19,10 @@
 - Uses the packages `urllib` and `sys` only
 - Does not check arguments passed (number or type)
 - Uses a `with` statement
+
+#### Task 3
+[3-error_code.py](3-error_code.py) is a Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in `utf-8`).
+- Manages `urllib.error.HTTPError` exceptions and prints: `Error code: ` followed by the HTTP status code
+- Uses the packages `urllib` and `sys` only
+- Does not check arguments passed (number or type)
+- Uses a `with` statement

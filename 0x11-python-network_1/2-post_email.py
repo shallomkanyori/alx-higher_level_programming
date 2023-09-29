@@ -14,8 +14,7 @@ if __name__ == "__main__":
     email = sys.argv[2]
 
     params = {"email": email}
-    data = urllib.parse.urlencode(params)
-    data.encode('ascii')
+    data = urllib.parse.urlencode(params).encode("utf-8")
 
     req = urllib.request.Request(url, data)
 

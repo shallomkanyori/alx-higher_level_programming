@@ -20,7 +20,7 @@ if __name__ == "__main__":
         if not obj:
             print("No result")
         else:
-            print(f"[{obj.id}] {obj.name}")
+            print(f"[{obj.get('id')}] {obj.get('name')}")
 
     except requests.exceptions.JSONDecodeError:
         print("Not a valid JSON")

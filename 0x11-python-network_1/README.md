@@ -67,3 +67,11 @@
 - The second argument is the user's `password`/PAT
 - Uses the packages `requests` and `sys` only
 - Does not check arguments passed (number or type)
+
+
+#### Task 10
+[100-github_commits.py](100-github_commits.py) is a Python script that takes 2 arguments in order to solve the following challenge: List 10 commits (from the most recent to oldest) of a repository using the GitHub API. Print the commits as: `<sha>: <author name>` (one per line)
+- The first argument is the `repository name`
+- The second argument is the `owner name`
+- Uses the packages `requests` and `sys` only
+- Does not check arguments passed (number or type)

@@ -59,3 +59,11 @@
 	- Displays `Not a valid JSON` if the JSON is invalid
 	- Displays `No result` if the JSON is empty
 - Uses the packages `requests` and `sys` only
+
+#### Task 9
+[10-my_github.py](10-my_github.py) is a Python script that takes a user's GitHub credentials (username and password) and uses the GitHub API to display their `id`.
+- Uses Basic Authentication with a personal access token as password to access to the user's information (only `read:user` permission is needed)
+- The first argument is the user's `username`
+- The second argument is the user's `password`/PAT
+- Uses the packages `requests` and `sys` only
+- Does not check arguments passed (number or type)

@@ -37,3 +37,9 @@
 - Uses the packages `requests` and `sys` only
 - The value of this variable is different for each request
 - Does not check arguments passed (number or type)
+
+#### Task 6
+[6-post_email.py](6-post_email.py) is  a Python script that takes in a URL and an email, sends a `POST` request to the passed URL with the email as a parameter, and displays the body of the response.
+- The email is sent in the `email` variable
+- Uses the packages `requests` and `sys` only
+- Does not check arguments passed (number or type)

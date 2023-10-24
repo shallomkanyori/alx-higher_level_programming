@@ -9,15 +9,7 @@ request(apiUrl, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    const movies = JSON.parse(body).results;
-    let count = 0;
-
-    for (const movie of movies) {
-      if (movie.characters.indexOf(personUrl) >= 0) {
-        count++;
-      }
-    }
-
+    const count = body.split(personUrl).length - 1;
     console.log(count);
   }
 });

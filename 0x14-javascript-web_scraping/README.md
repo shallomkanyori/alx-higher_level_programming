@@ -18,3 +18,9 @@
 - The first argument is the URL to request (`GET`)
 - The status code is printed as: `code: <status code>`
 - Uses the module `request`
+
+#### Task 3
+[3-starwars_title.js](3-starwars_title.js) is a JS script that prints the title of a Star Wars movie where the episode number matches a given integer.
+- The first argument is the movie ID
+- Uses the [Star wars API](https://swapi-api.alx-tools.com/) with the endpoint `https://swapi-api.alx-tools.com/api/films/:id`
+- Uses the module `request`

@@ -12,3 +12,9 @@
 - The second argument is the string to write
 - The content of the file is written in `utf-8`
 - If an error occurred during while writing, prints the error object
+
+#### Task 2
+[2-statuscode.js](2-statuscode.js) is a JS script that display the status code of a GET request.
+- The first argument is the URL to request (`GET`)
+- The status code is printed as: `code: <status code>`
+- Uses the module `request`

@@ -30,3 +30,10 @@
 - The first argument is the API URL of the Star wars API: `https://swapi-api.alx-tools.com/api/films/`
 - Wedge Antilles is character ID 18 - the script uses this ID for filtering the result of the API
 - Uses the module `request`
+
+#### Task 5
+[5-request_store.js](5-request_store.js) is a JS script that gets the contents of a webpage and stores it in a file.
+- The first argument is the URL to request
+- The second argument the file path to store the body response
+- The file must be UTF-8 encoded
+- Uses the module `request`

@@ -24,3 +24,9 @@
 - The first argument is the movie ID
 - Uses the [Star wars API](https://swapi-api.alx-tools.com/) with the endpoint `https://swapi-api.alx-tools.com/api/films/:id`
 - Uses the module `request`
+
+#### Task 4
+[4-starwars_count.js](4-starwars_count.js) is a JS script that prints the number of movies where the character “Wedge Antilles” is present.
+- The first argument is the API URL of the Star wars API: `https://swapi-api.alx-tools.com/api/films/`
+- Wedge Antilles is character ID 18 - the script uses this ID for filtering the result of the API
+- Uses the module `request`

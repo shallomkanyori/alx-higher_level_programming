@@ -51,3 +51,10 @@
 - Displays one character name by line
 - Uses the [Star wars API](https://swapi-api.alx-tools.com/)
 - Uses the module `request`
+
+#### Task 8
+[101-starwars_characters.js](101-starwars_characters.js) is a JS script that prints all characters of a Star Wars movie:
+- The first argument is the Movie ID
+- Displays one character name by line in the same order of the list “characters” in the `/films/` response
+- Uses the [Star wars API](https://swapi-api.alx-tools.com/)
+- Uses the module `request`

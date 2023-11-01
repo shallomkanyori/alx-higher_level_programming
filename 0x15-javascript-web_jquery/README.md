@@ -64,3 +64,14 @@
 - Uses `document.querySelector` to select the HTML tag
 - Does not use the JQuery API
 - Note: Script is imported from the `<head>` tag, not at the end of the HTML
+
+#### Task 11
+[101-script.js](101-script.js) is a JavaScript script that adds, removes and clears `LI` elements from a list when the user clicks
+- The new element: `<li>Item</li>`
+- The new element is added to `UL.my_list`
+- When the user clicks on `DIV#add_item`: a new element is added to the list
+- When the user clicks on `DIV#remove_item`: the last element is removed from the list
+- When the user clicks on `DIV#clear_list`: all elements of the list are removed
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API
+- Works when it is imported from the `HEAD` tag

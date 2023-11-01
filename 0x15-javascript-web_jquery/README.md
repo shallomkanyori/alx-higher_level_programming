@@ -50,3 +50,10 @@
 - All movie titles are listed in the HTML tag `UL#list_movies`
 - Does not use `document.querySelector` to select the HTML tag
 - Uses the JQuery API
+
+#### Task 9
+[9-script.js](9-script.js) is a JavaScript script that fetches from `https://hellosalut.stefanbohacek.dev/?lang=fr` and displays the value of `hello` from that fetch in the HTML tag `DIV#hello`.
+- The translation of “hello” is displayed in the HTML tag `DIV#hello`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API
+- Works when it is imported from the `<head>` tag

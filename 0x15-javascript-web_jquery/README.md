@@ -57,3 +57,10 @@
 - Does not use `document.querySelector` to select the HTML tag
 - Uses the JQuery API
 - Works when it is imported from the `<head>` tag
+
+
+#### Task 10
+[100-script.js](100-script.js) is a JavaScript script that updates the text color of the `<header>` element to red (`#FF0000`):
+- Uses `document.querySelector` to select the HTML tag
+- Does not use the JQuery API
+- Note: Script is imported from the `<head>` tag, not at the end of the HTML

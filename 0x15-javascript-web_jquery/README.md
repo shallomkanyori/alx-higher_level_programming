@@ -26,3 +26,10 @@
 - If the current class is `red`, when the user clicks on `DIV#toggle_header`, the class is updated to `green` and vice versa.
 - Does not use `document.querySelector` to select the HTML tag
 - Uses the JQuery API
+
+#### Task 5
+[5-script.js](5-script.js) is a a JavaScript script that adds a `<li>` element to a list when the user clicks on the tag `DIV#add_item`
+- The new element: `<li>Item</li>`
+- The new element is added to `UL.my_list`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API

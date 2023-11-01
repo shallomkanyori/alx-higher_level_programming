@@ -38,3 +38,9 @@
 [6-script.js](6-script.js) is a JavaScript script that updates the text of the `<header>` element to `New Header!!!` when the user clicks on `DIV#update_header`
 - Does not use `document.querySelector` to select the HTML tag
 - Uses the JQuery API
+
+#### Task 7
+[7-script.js](7-script.js) is a JavaScript script that fetches the character `name` from this URL: `https://swapi-api.alx-tools.com/api/people/5/?format=json`
+- The name must be displayed in the HTML tag `DIV#character`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API

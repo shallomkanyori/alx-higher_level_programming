@@ -82,3 +82,16 @@
 - The language code will be the value entered in the tag `INPUT#language_code` (ex: `es`, `fr`, `en` etc.)
 - The translation is fetched when the user clicks on `INPUT#btn_translate`
 - The translation of “Hello” is displayed in the HTML tag `DIV#hello`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API
+- Works when it is imported from the `HEAD` tag
+
+#### Task 13
+[103-script.js](103-script.js) is a JavaScript script that fetches and prints how to say “Hello” depending on the language.
+- Uses this API service: [https://www.fourtonfish.com/hellosalut/hello/](https://www.fourtonfish.com/hellosalut/hello/)
+- The language code will be the value entered in the tag `INPUT#language_code` (ex: `es`, `fr`, `en` etc.)
+- The translation is fetched when the user clicks on `INPUT#btn_translate` OR presses `ENTER` when the focus is on `INPUT#language_code`
+- The translation of “Hello” is displayed in the HTML tag `DIV#hello`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API
+- Works when it is imported from the `HEAD` tag

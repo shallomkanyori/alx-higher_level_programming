@@ -33,3 +33,8 @@
 - The new element is added to `UL.my_list`
 - Does not use `document.querySelector` to select the HTML tag
 - Uses the JQuery API
+
+#### Task 6
+[6-script.js](6-script.js) is a JavaScript script that updates the text of the `<header>` element to `New Header!!!` when the user clicks on `DIV#update_header`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API

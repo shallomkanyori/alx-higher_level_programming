@@ -44,3 +44,9 @@
 - The name must be displayed in the HTML tag `DIV#character`
 - Does not use `document.querySelector` to select the HTML tag
 - Uses the JQuery API
+
+#### Task 8
+[8-script.js](8-script.js) is a JavaScript script that fetches and lists the `title` for all movies by using this URL: `https://swapi-api.alx-tools.com/api/films/?format=json`
+- All movie titles are listed in the HTML tag `UL#list_movies`
+- Does not use `document.querySelector` to select the HTML tag
+- Uses the JQuery API
